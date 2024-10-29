@@ -59,5 +59,6 @@
     inotify-tools
     wget
     fh
+    thunderbird
   ];
 }
