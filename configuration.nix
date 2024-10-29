@@ -6,9 +6,9 @@
 
 let
   doubleclickingtext = ''
-    \[peepeepoopoo\]
-    MatchName\=\*
-    ModelBouncingKeys\=\0
+    [peepeepoopoo]
+    MatchName=*
+    ModelBouncingKeys=0
   '';
 in
 {
@@ -99,7 +99,7 @@ in
   security.polkit.enable = true;
 
   environment.extraOutputsToInstall = [ "dev" ];
-  environment.etc."libinput/".text = '';
+  environment.etc."libinput/".text = "";
   environment.etc."libinput/localoverrides.quirks".text = ${doubleclickingtext};
 
   virtualisation.docker = {
