@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 { config, lib, pkgs, ... }:
 
 {
@@ -6,6 +7,11 @@
       /home/j2/musnix
     ];
   
+=======
+{ inputs, config, lib, pkgs, ... }:
+
+{
+>>>>>>> 32179d7 (wooo yea woo)
   musnix.enable = true;
 
   # Enable sound with pipewire.

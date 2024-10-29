@@ -1,11 +1,23 @@
+<<<<<<< HEAD
 { pkgs, lib, config, ... }:
 
 let
   stable = import <nixos-stable/nixpkgs> { config = config.nixpkgs.config; };
+=======
+{ inputs, pkgs, lib, config, ... }:
+
+let
+  doubleclicking = pkgs.writeText "doubleclicking" ''
+    [peepeepoopoo]
+    MatchName=*
+    ModelBouncingKeys=1
+  '';
+>>>>>>> 32179d7 (wooo yea woo)
 in
 {
   environment.systemPackages = with pkgs; [
     floorp
+<<<<<<< HEAD
     libusb
     libsForQt5.qtwayland
     xorg.libxcb
@@ -23,18 +35,36 @@ in
     (pkgs.python3.override {
       bluezSupport = true;
     })
+=======
+    cudaPackages.cudatoolkit
+    cudaPackages.cuda_cudart
+    cudaPackages.cudnn
+    cudaPackages.cutensor
+    distrobox
+    cmake
+    (pkgs.python312.override {
+      bluezSupport = true;
+    })
+    python312Packages.huggingface-hub
+>>>>>>> 32179d7 (wooo yea woo)
     android-tools
     grim
     slurp
     wl-clipboard
     mako
     gnumake
+<<<<<<< HEAD
     libvlc
+=======
+>>>>>>> 32179d7 (wooo yea woo)
     onlyoffice-bin_latest
     nodejs
     wineWowPackages.staging
     winetricks
+<<<<<<< HEAD
     libgcc
+=======
+>>>>>>> 32179d7 (wooo yea woo)
     gcc
     ffmpeg
     mono
@@ -65,5 +95,18 @@ in
     python310
     yabridge
     yabridgectl
+<<<<<<< HEAD
+=======
+    scrcpy
+    espeak
+    tmux
+    inotify-tools
+    wget
+    fh
+    (pkgs.runCommand "doubleclicking" {} ''
+      mkdir -p /etc/libinput/localoverrides.quirks
+      ln -s ${doubleclicking} /etc/libinput/localoverrides.quirks
+    '')
+>>>>>>> 32179d7 (wooo yea woo)
   ];
 }
