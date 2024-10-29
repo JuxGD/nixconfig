@@ -1,11 +1,5 @@
 { inputs, pkgs, lib, config, ... }:
 
-let
-  doubleclicking = pkgs.writeText "doubleclicking" ''
-    [peepeepoopoo]
-    MatchName=*
-    ModelBouncingKeys=1
-  '';
 in
 {
   environment.systemPackages = with pkgs; [
@@ -66,9 +60,5 @@ in
     inotify-tools
     wget
     fh
-    (pkgs.runCommand "doubleclicking" {} ''
-      mkdir -p /etc/libinput/localoverrides.quirks
-      ln -s ${doubleclicking} /etc/libinput/localoverrides.quirks
-    '')
   ];
 }
