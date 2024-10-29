@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-{ config, lib, pkgs, ... }:
-=======
 { inputs, config, lib, pkgs, ... }:
->>>>>>> 32179d7 (wooo yea woo)
 
 {
   services = {

@@ -2,25 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-<<<<<<< HEAD
-{ config, lib, pkgs, ... }:
-
-{
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ./packages.nix
-      ./graphics.nix
-      ./fonts.nix
-      ./audio.nix
-=======
 { inputs, config, lib, pkgs, ... }:
 
 {
   imports =
     [
       ./hardware-configuration.nix
->>>>>>> 32179d7 (wooo yea woo)
     ];
 
   # Boot loader
@@ -127,20 +114,15 @@
     # here, NOT in environment.systemPackages
     xorg.libxcb
     libsForQt5.full
-<<<<<<< HEAD
-=======
     libgcc
     glib
     libvlc
     cudaPackages.libcublas
->>>>>>> 32179d7 (wooo yea woo)
     libsForQt5.qt5.qtx11extras
     alsa-lib
     libsoup_3
     libevdev
     linuxHeaders
-<<<<<<< HEAD
-=======
     libusb1
     gtk3
     pango
@@ -150,7 +132,6 @@
     gdk-pixbuf
     libepoxy
     fontconfig
->>>>>>> 32179d7 (wooo yea woo)
   ];
 
   programs.steam = {
@@ -174,11 +155,7 @@
       acceleration = "cuda";
     };
 
-<<<<<<< HEAD
-    gitea.enable = true;
-=======
     forgejo.enable = true;
->>>>>>> 32179d7 (wooo yea woo)
   };
 
   hardware.bluetooth.enable = true;
@@ -219,9 +196,5 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.\nix or on https://nixos.org/nixos/options.html).
-<<<<<<< HEAD
-  system.stateVersion = "23.11"; # Did you read the comment?
-=======
   system.stateVersion = "24.05"; # Did you read the comment?
->>>>>>> 32179d7 (wooo yea woo)
 }
