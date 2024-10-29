@@ -99,7 +99,7 @@ in
   security.polkit.enable = true;
 
   environment.extraOutputsToInstall = [ "dev" ];
-  environment.etc.libinput."localoverrides.quirks".text = doubleclickingtext;
+  environment.etc."libinput/localoverrides.quirks".text = doubleclickingtext;
 
   virtualisation.docker = {
     enable = true;
