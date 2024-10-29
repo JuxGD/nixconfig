@@ -4,6 +4,13 @@
 
 { inputs, config, lib, pkgs, ... }:
 
+let
+  doubleclickingtext = ''
+    \[peepeepoopoo\]
+    MatchName\=\*
+    ModelBouncingKeys\=\0
+  '';
+in
 {
   imports =
     [
@@ -93,11 +100,7 @@
 
   environment.extraOutputsToInstall = [ "dev" ];
   environment.etc."libinput/".text = '';
-  environment.etc."libinput/localoverrides.quirks".text = ''
-    [peepeepoopoo]
-    MatchName=*
-    ModelBouncingKeys=0
-  '';
+  environment.etc."libinput/localoverrides.quirks".text = doubleclickingtext;
 
   virtualisation.docker = {
     enable = true;
