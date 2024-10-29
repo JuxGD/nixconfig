@@ -1,6 +1,5 @@
 { inputs, pkgs, lib, config, ... }:
 
-in
 {
   environment.systemPackages = with pkgs; [
     floorp
