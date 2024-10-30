@@ -5,8 +5,8 @@
 { inputs, config, lib, pkgs, ... }:
 
 let
-  staging = staging.packages.${lib.system};
-  stable = stable.packages.${lib.system};
+  staging = inputs.staging.packages.${lib.system}.pkgs;
+  stable = inputs.stable.packages.${lib.system}.pkgs;
 
   doubleclickingtext = ''
     [Never Debounce]
@@ -67,18 +67,6 @@ in
     LC_TELEPHONE = "en_US.UTF-8";
     LC_TIME = "en_US.UTF-8";
   };
-
-  # Configure keymap in X11
-  services.xserver = {
-    xkb.layout = "us";
-    xkb.variant = "";
-  };
-
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  services.libinput.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users = {
@@ -155,11 +143,24 @@ in
   virtualisation.libvirtd.enable = true;
   programs.virt-manager.enable = true;
 
-  services.flatpak.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   xdg.portal.config.common.default = "gtk";
 
   services = {
+
+    # Configure keymap in X11
+    xserver = {
+      xkb.layout = "us";
+      xkb.variant = "";
+    };
+
+    # Enable CUPS to print documents.
+    printing.enable = true;
+
+    # Enable touchpad support (enabled default in most desktopManager).
+    libinput.enable = true;
+
+    flatpak.enable = true;
 
     ollama = {
       enable = true;
