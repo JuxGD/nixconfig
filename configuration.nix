@@ -5,8 +5,8 @@
 { inputs, config, lib, pkgs, ... }:
 
 let
-  staging = inputs.staging;
-  stable = inputs.stable;
+  staging = inputs.staging.pkgs;
+  stable = inputs.stable.pkgs;
 
   doubleclickingtext = ''
     [Never Debounce]
