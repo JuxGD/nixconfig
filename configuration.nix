@@ -5,6 +5,9 @@
 { inputs, config, lib, pkgs, ... }:
 
 let
+  staging = inputs.staging.packages.${system};
+  stable = inputs.stable.packages.${system};
+
   doubleclickingtext = ''
     [Never Debounce]
     MatchUdevType=mouse
@@ -164,6 +167,17 @@ in
     };
 
     forgejo.enable = true;
+
+    open-webui = {
+      enable = true;
+      package = staging.open-webui;
+      environment = {
+        ANONYMIZED_TELEMETRY = "False";
+        DO_NOT_TRACK = "True";
+        SCARF_NO_ANALYTICS = "True";
+        WEBUI_AUTH = "True";
+      };
+    };
   };
 
   hardware.bluetooth.enable = true;

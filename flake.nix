@@ -1,14 +1,19 @@
 {
-  description = "A simple NixOS flake";
+  description = "NixOS configuration";
 
   inputs = {
+    stable = { url = "github:NixOS/nixpkgs/nixos-23.11"; };
     nixpkgs = { url = "github:NixOS/nixpkgs/nixos-unstable"; };
+    staging = { url = "github:NixOS/nixpkgs/staging"; };
     musnix = { url = "github:musnix/musnix"; };
   };
+
+  let
+    systemarchitecturethingy = "x86_64-linux";
   outputs = { self, nixpkgs, ... }@inputs: rec {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+        system = systemarchitecturethingy;
         modules = [
           inputs.musnix.nixosModules.musnix
           ./configuration.nix
@@ -17,7 +22,7 @@
           ./audio.nix
           ./fonts.nix
         ];
-      specialArgs = { inherit inputs; };
+      specialArgs = { inherit inputs; system = systemarchitecturethingy};
       };
     };
   };
