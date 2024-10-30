@@ -12,7 +12,7 @@
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs staging stable; };
+        specialArgs = { inherit inputs stable staging; };
         modules = [
           inputs.musnix.nixosModules.musnix
           ./configuration.nix
