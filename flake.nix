@@ -1,3 +1,6 @@
+let
+  systemarchitecturethingy = "x86_64-linux";
+in
 {
   description = "NixOS configuration";
 
@@ -8,9 +11,6 @@
     musnix = { url = "github:musnix/musnix"; };
   };
 
-  let
-    systemarchitecturethingy = "x86_64-linux";
-  in
   outputs = { self, nixpkgs, ... }@inputs: rec {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
