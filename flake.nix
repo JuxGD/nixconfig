@@ -8,7 +8,7 @@
     musnix.url = "github:musnix/musnix";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: rec {
+  outputs = { self, nixpkgs, stable, staging ... }@inputs: rec {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
