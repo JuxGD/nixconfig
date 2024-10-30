@@ -12,7 +12,7 @@
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        specialArgs = { inherit inputs unstable};
+        specialArgs = { inherit inputs unstable };
         modules = [
           inputs.musnix.nixosModules.musnix
           ./configuration.nix
