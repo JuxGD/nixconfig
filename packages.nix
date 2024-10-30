@@ -1,5 +1,10 @@
-{ pkgs, lib, config, inputs, stable, staging, ... }:
+{ pkgs, lib, config, inputs, ... }:
 
+let
+  stable = inputs.stable.legacyPackages.${pkgs.system};
+  master = inputs.master.legacyPackages.${pkgs.system};
+  staging = inputs.master.legacyPackages.${pkgs.system};
+in
 {
   environment.systemPackages = with pkgs; [
     floorp

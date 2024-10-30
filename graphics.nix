@@ -1,5 +1,9 @@
 { inputs, config, lib, pkgs, ... }:
-
+let
+  stable = inputs.stable.legacyPackages.${pkgs.system};
+  master = inputs.master.legacyPackages.${pkgs.system};
+  staging = inputs.master.legacyPackages.${pkgs.system};
+in
 {
   services = {
     xserver = {

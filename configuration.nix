@@ -2,9 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, lib, pkgs, inputs, stable, staging, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 let
+  stable = inputs.stable.legacyPackages.${pkgs.system};
+  master = inputs.master.legacyPackages.${pkgs.system};
+  staging = inputs.master.legacyPackages.${pkgs.system};
+
   doubleclickingtext = ''
     [Never Debounce]
     MatchUdevType=mouse
