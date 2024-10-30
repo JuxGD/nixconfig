@@ -8,14 +8,11 @@
     musnix = { url = "github:musnix/musnix"; };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: let
-    systemarchitecturethingy = "x86_64-linux";
-  in
-  rec {
+  outputs = { self, nixpkgs, ... }@inputs: rec {
     
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
-        system = systemarchitecturethingy;
+        system = "x86_64-linux";
         modules = [
           inputs.musnix.nixosModules.musnix
           ./configuration.nix
@@ -24,7 +21,7 @@
           ./audio.nix
           ./fonts.nix
         ];
-      specialArgs = { inherit inputs; system = systemarchitecturethingy; };
+      specialArgs = { inherit inputs; };
       };
     };
   };

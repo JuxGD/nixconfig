@@ -53,7 +53,41 @@
     "root": {
       "inputs": {
         "musnix": "musnix",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_2",
+        "stable": "stable",
+        "staging": "staging"
+      }
+    },
+    "stable": {
+      "locked": {
+        "lastModified": 1720535198,
+        "narHash": "sha256-zwVvxrdIzralnSbcpghA92tWu2DV2lwv89xZc8MTrbg=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "205fd4226592cc83fd4c0885a3e4c9c400efabb5",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-23.11",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "staging": {
+      "locked": {
+        "lastModified": 1730247291,
+        "narHash": "sha256-WXWjLjWkTFvit4Dbn5AWI5DWmuIQIcJ8o0jZ8erTpt0=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "f3423cc412aface40f094d1d5664cea7762ecbd1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "staging",
+        "repo": "nixpkgs",
+        "type": "github"
       }
     }
   },
