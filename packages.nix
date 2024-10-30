@@ -60,5 +60,6 @@
     wget
     fh
     thunderbird
+    libinput
   ];
 }

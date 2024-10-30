@@ -6,8 +6,8 @@
 
 let
   doubleclickingtext = ''
-    [peepeepoopoo]
-    MatchName=*
+    [Never Debounce]
+    MatchUdevType=mouse
     ModelBouncingKeys=0
   '';
 in
@@ -99,7 +99,7 @@ in
   security.polkit.enable = true;
 
   environment.extraOutputsToInstall = [ "dev" ];
-  environment.etc."libinput/localoverrides.quirks".text = doubleclickingtext;
+  environment.etc."libinput/local-overrides.quirks".text = doubleclickingtext;
 
   virtualisation.docker = {
     enable = true;
