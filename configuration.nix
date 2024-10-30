@@ -2,12 +2,9 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, lib, pkgs, ... }:
+{ inputs, config, lib, pkgs, unstable, staging ... }:
 
 let
-  staging = inputs.staging;
-  stable = inputs.stable;
-
   doubleclickingtext = ''
     [Never Debounce]
     MatchUdevType=mouse

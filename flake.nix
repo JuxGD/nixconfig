@@ -21,7 +21,7 @@
           ./audio.nix
           ./fonts.nix
         ];
-      specialArgs = { inherit inputs; };
+      specialArgs = { inherit inputs; inherit stable; inherit staging; };
       };
     };
   };
