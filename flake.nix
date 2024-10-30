@@ -23,7 +23,7 @@ in
           ./audio.nix
           ./fonts.nix
         ];
-      specialArgs = { inherit inputs; system = systemarchitecturethingy};
+      specialArgs = { inherit inputs; system = systemarchitecturethingy; };
       };
     };
   };
