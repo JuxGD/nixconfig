@@ -8,10 +8,10 @@
     musnix = { url = "github:musnix/musnix"; };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: rec let
+  outputs = { self, nixpkgs, ... }@inputs: let
     systemarchitecturethingy = "x86_64-linux";
   in
-  {
+  rec {
     
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
