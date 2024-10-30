@@ -1,5 +1,20 @@
 {
   "nodes": {
+    "master": {
+      "locked": {
+        "lastModified": 1730263663,
+        "narHash": "sha256-6qkh67ScZi1Twp8s1e6df2TinQb0QQGwkDZBQZhSKW8=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "bc6857069763f5721a53462eaf72016fafe002ff",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "musnix": {
       "inputs": {
         "nixpkgs": "nixpkgs"
@@ -44,13 +59,15 @@
         "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
+        "owner": "NixOS",
         "ref": "nixos-unstable",
-        "type": "indirect"
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "root": {
       "inputs": {
+        "master": "master",
         "musnix": "musnix",
         "nixpkgs": "nixpkgs_2",
         "stable": "stable",
@@ -67,9 +84,10 @@
         "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
+        "owner": "NixOS",
         "ref": "24.05",
-        "type": "indirect"
+        "repo": "nixpkgs",
+        "type": "github"
       }
     },
     "staging": {
@@ -82,9 +100,10 @@
         "type": "github"
       },
       "original": {
-        "id": "nixpkgs",
+        "owner": "NixOS",
         "ref": "staging",
-        "type": "indirect"
+        "repo": "nixpkgs",
+        "type": "github"
       }
     }
   },
