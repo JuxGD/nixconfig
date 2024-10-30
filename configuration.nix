@@ -2,9 +2,12 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ inputs, config, lib, pkgs, stable, staging, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 let
+  stable = ${inputs.stable};
+  staging = ${inputs.staging};
+
   doubleclickingtext = ''
     [Never Debounce]
     MatchUdevType=mouse
@@ -15,6 +18,7 @@ in
   imports =
     [
       ./hardware-configuration.nix
+      staging
     ];
 
   # Boot loader
