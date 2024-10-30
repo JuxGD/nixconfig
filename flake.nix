@@ -17,7 +17,7 @@
       stable = stablePkgs;
       zhdStable = stablePkgs.zfsStable;
       staging = stagingPkgs;
-      zhdStaging = stagingPkfs.zfsStaging;
+      zhdStaging = stagingPkgs.zfsStaging;
     };
 
     overlayModule = ({ config, pkgs, ... }: { nixpkgs.overlays = [ overlay ]; });
