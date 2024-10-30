@@ -34,7 +34,7 @@
           ./graphics.nix
           ./audio.nix
           ./fonts.nix
-          { stable, staging, ... }: { }
+          { staging = inputs.staging; }
         ];
         specialArgs.channels = { inherit nixpkgs stable staging; };
       };
