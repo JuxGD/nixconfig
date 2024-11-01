@@ -1,12 +1,16 @@
 {
+  # Jux's NixOS configuration
   description = "NixOS configuration";
 
   inputs = {
+    # nixpkgs branches
     stable.url = "github:NixOS/nixpkgs/24.05";
-    master.url = "github:NixOS/nixpkgs";
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    master.url = "github:NixOS/nixpkgs/master"; 
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; # unstable branch is default
     staging.url = "github:NixOS/nixpkgs/staging";
-    musnix.url = "github:musnix/musnix";
+
+    # modules
+    musnix.url = "github:musnix/musnix/master";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: rec {

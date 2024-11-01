@@ -161,8 +161,6 @@ in
     # Enable touchpad support (enabled default in most desktopManager).
     libinput.enable = true;
 
-    flatpak.enable = true;
-
     ollama = {
       enable = true;
       acceleration = "cuda";

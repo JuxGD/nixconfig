@@ -5,7 +5,7 @@ let
   master = inputs.master.legacyPackages.${pkgs.system};
   staging = inputs.master.legacyPackages.${pkgs.system};
 in
-{
+{  
   environment.systemPackages = with pkgs; [
     floorp
     cudaPackages.cudatoolkit
