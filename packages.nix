@@ -18,6 +18,7 @@ in
       bluezSupport = true;
     })
     python312Packages.huggingface-hub
+    pipreqs
     android-tools
     grim
     slurp
