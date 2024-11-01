@@ -174,7 +174,8 @@ in
  #      WEBUI_AUTH = "True";
  #    };
  #  };
- #};
+  
+  };
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
