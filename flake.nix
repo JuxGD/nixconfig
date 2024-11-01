@@ -25,6 +25,7 @@
           ./graphics.nix
           ./audio.nix
           ./fonts.nix
+          ./libraries.nix
         ];
       };
     };
