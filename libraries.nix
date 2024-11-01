@@ -30,5 +30,6 @@ in
     gdk-pixbuf
     libepoxy
     fontconfig
+    portaudio
   ];
 }
