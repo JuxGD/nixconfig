@@ -64,8 +64,8 @@ in
     tmux
     inotify-tools
     wget
-    fh
     thunderbird
     libinput
+    protonup-qt
   ];
 }
