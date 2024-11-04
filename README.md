@@ -33,7 +33,7 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 
 ## Important, if you wanna use this config
 
-- `hardware-configuration.nix` is NOT in the repo, since it's specific to each system
+- It looks like `hardware-configuration.nix` has to be tracked by git, so if you wanna use this config you'll have to replace it with your own `hardware-configuration.nix` in `/etc/nixos/`.
 - Configured with an NVIDIA RTX 3070 Ti Mobile
 - Timezone: America/Santiago
 - Uses GRUB
