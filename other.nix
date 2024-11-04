@@ -6,5 +6,8 @@
       enable = true;
       acceleration = "cuda";
     };
+
+    forgejo.enable = true;
+    gnome.gnome-keyring.enable = true;
   };
 }

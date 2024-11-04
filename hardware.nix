@@ -21,8 +21,6 @@
   services = {
     printing.enable = true;
     libinput.enable = true;
-    forgejo.enable = true;
-    gnome.gnome-keyring.enable = true;
 
     xserver = {
       xkb.layout = "us";
