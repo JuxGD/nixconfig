@@ -15,13 +15,12 @@
       dockerCompat = true;
     };
 
-    virt-manager.enable = true;
+    libvirtd.enable = true;
 
     waydroid.enable = true;
   };
   
   programs = {
-    libvirtd.enable = true;
     virt-manager.enable = true;
   };
 }
