@@ -2,8 +2,8 @@
 
 {
   boot = {
+    supportedFilesystems = [ "ntfs" ];
     loader = {
-      supportedFilesystems = [ "ntfs" ];
       systemd-boot.enable = false;
       efi = {
         canTouchEfiVariables = true;
