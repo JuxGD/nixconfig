@@ -31,7 +31,7 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 - [Forgejo](https://forgejo.org)
 - Some libraries, for AppImages
 
-## Important
+## Important, if you wanna use this config
 
 - `hardware-configuration.nix` is NOT in the repo, since it's specific to each system
 - Configured with an NVIDIA RTX 3070 Ti Mobile
@@ -41,3 +41,13 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 - Auto optimise store enabled
 - NVIDIA drivers are version 535, because of a problem there was. Not sure if that's fixed now but oh well
 - A libinput override was attempted, to remove the debounce time for mice. This was done for Minecraft PvP
+- Change the users to your liking, you're obviously not "j" or "j2" (unless you are ig)
+
+## Contributing
+
+If there's something you think could be improved about my config, just open an issue!
+
+## License
+This repository is distributed under the terms of the [replicense](https://github.com/JuxGD/replicense) (rpli).
+- [Markdown](https://github.com/JuxGD/nixconfig/tree/main/LICENSE.md)
+- [Plain text](https://github.com/JuxGD/nixconfig/tree/main/LICENSE)
