@@ -21,11 +21,18 @@
         modules = [
           inputs.musnix.nixosModules.musnix
           ./configuration.nix
-          ./packages.nix
-          ./graphics.nix
           ./audio.nix
+          ./boot.nix
           ./fonts.nix
+          ./gaming.nix
+          ./graphics.nix
+          ./hardware.nix
           ./libraries.nix
+          ./networking.nix
+          ./packages.nix
+          ./users.nix
+          ./virtualisation.nix
+          ./other.nix
         ];
       };
     };

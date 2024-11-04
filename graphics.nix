@@ -1,4 +1,5 @@
-{ inputs, config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
+
 let
   stable = inputs.stable.legacyPackages.${pkgs.system};
   master = inputs.master.legacyPackages.${pkgs.system};
@@ -6,10 +7,12 @@ let
 in
 {
   services = {
+    
     xserver = {
       enable = true;
       videoDrivers = [ "nvidia" "amdgpu" ];
     };
+
     desktopManager.plasma6.enable = true;
     displayManager = {
       sddm = {
@@ -25,17 +28,17 @@ in
   };
 
   hardware = {
+
     graphics = {
       enable = true;
     };
+
     nvidia = {
       modesetting.enable = true;
-      powerManagement = {
-        enable = false;
-        finegrained = false;
-      };
+      powerManagement = { enable = false; finegrained = false; };
       open = false;
       nvidiaSettings = true;
+
       prime = {
         amdgpuBusId = "PCI:116:0:0";
         nvidiaBusId = "PCI:1:0:0";
@@ -44,6 +47,7 @@ in
           enableOffloadCmd = true;
         };
       };
+
       package = let
         rcu_patch = pkgs.fetchpatch {
           url = "https://github.com/gentoo/gentoo/raw/c64caf53/x11-drivers/nvidia-drivers/files/nvidia-drivers-470.223.02-gpl-pfn_valid.patch";
@@ -58,6 +62,15 @@ in
         persistencedSha256 = "sha256-d0Q3Lk80JqkS1B54Mahu2yY/WocOqFFbZVBh+ToGhaE=";
         patches = [ rcu_patch ];
       };
+
+    };
+  };
+
+  xdg = {
+    portal = {
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+      enable = true;
+      config.common.default = "gtk";
     };
   };
 }
