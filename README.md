@@ -12,6 +12,8 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 - [Floorp](https://floorp.app/en)
 - [Thunderbird](https://thunderbird.net)
 - [Ollama](https://ollama.com)
+- [Docker](https://docker.com)
+- [Podman](https://podman.io)
 - [Distrobox](https://distrobox.it)
 - [OnlyOffice](https://onlyoffice.com)
 - [Node.js](https://nodejs.org) w/ [pnpm](https://pnpm.io)

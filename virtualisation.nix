@@ -10,13 +10,8 @@
       };
     };
 
-    podman = {
-      enable = true;
-      dockerCompat = true;
-    };
-
+    podman.enable = true;
     libvirtd.enable = true;
-
     waydroid.enable = true;
   };
   
