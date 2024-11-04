@@ -99,6 +99,11 @@ in
   virtualisation.waydroid = {
     enable = true;
   };
+  virtualisation.podman = {
+    enable = true;
+  };
+
+
 
   programs.kdeconnect.enable = true;
   programs.light.enable = true;
