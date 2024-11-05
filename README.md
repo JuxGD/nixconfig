@@ -10,7 +10,6 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 ## Relevant packages, modules and programs
 
 - [Floorp](https://floorp.app/en)
-- [Thunderbird](https://thunderbird.net)
 - [Ollama](https://ollama.com)
 - [Docker](https://docker.com)
 - [Podman](https://podman.io)
@@ -24,11 +23,9 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 - [FFmpeg](https://ffmpeg.org)
 - [Haxe](https://haxe.org) w/ [Neko/NekoVM](https://nekovm.org/) & [HashLink](https://hashlink.haxe.org)
 - [Carla](https://kx.studio/Applications:Carla)
-- [Ryujinx](https://ryujinx.org) (R.I.P. :c)
 - [yabridge](https://github.com/robert-vdh/yabridge) w/ yabridgectl
 - [git](https://git-scm.com)
 - [zsh](https://zsh.org)
-- [Steam](https://steampowered.com)
 - [musnix](https://github.com/musnix/musnix)
 - [Forgejo](https://forgejo.org)
 - Some libraries, for AppImages
