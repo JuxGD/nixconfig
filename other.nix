@@ -12,6 +12,17 @@ in
       acceleration = "cuda";
     };
 
+    open-webui = {
+      enable = true;
+      package = staging.open-webui;
+      environment = {
+        ANONYMIZED_TELEMETRY = "False";
+        DO_NOT_TRACK = "True";
+        SCARF_NO_ANALYTICS = "True";
+        WEBUI_AUTH = "False";
+      };
+    };
+
     forgejo.enable = true;
     gnome.gnome-keyring.enable = true;
   };
