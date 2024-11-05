@@ -8,8 +8,8 @@ in
 {
   fonts = {
     fontconfig.enable = true;
-    enableDefaultFonts = true;
-    fonts = with pkgs; [
+    enableDefaultPackages = true;
+    packages = with pkgs; [
       noto-fonts
       noto-fonts-cjk-sans
       noto-fonts-emoji
