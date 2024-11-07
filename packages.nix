@@ -51,14 +51,10 @@ in
     fuse3
     openssl
     pkg-config
-    vital
-    carla
     rustup
     ryujinx
     linuxHeaders
     python310
-    yabridge
-    yabridgectl
     scrcpy
     espeak
     tmux

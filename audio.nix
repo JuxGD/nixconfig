@@ -6,6 +6,38 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
+  environment.systemPackages = with pkgs; [
+    carla
+    yabridge
+    yabridgectl
+    lsp-plugins
+    chow-kick
+    chow-phaser
+    chow-centaur
+    chow-tape-model
+    adlplug
+    odin2
+    padthv1
+    magnetophonDSP.VoiceOfFaust
+    tunefish
+    geonkick
+    fmsynth
+    vcv-rack
+    helm
+    zynaddsubfx
+    drumkv
+    surge-XT
+    fluidsynth
+    rakarrack
+    rkrlv2
+    easyeffects
+    bslizr
+    jackdsp
+    delayarchitect
+    plugdata
+    cardinal
+    distrho-ports
+  ];
   musnix.enable = true;
 
   # Enable sound with pipewire.
