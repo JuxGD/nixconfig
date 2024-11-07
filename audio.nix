@@ -7,6 +7,7 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
+    ardour
     carla
     yabridge
     yabridgectl
