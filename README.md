@@ -28,6 +28,10 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 - [zsh](https://zsh.org)
 - [musnix](https://github.com/musnix/musnix)
 - [Forgejo](https://forgejo.org)
+- [Ardour](https://ardour.org/)
+- [LSP](https://lsp-plug.in/)
+- [DISTRHO Ports](https://github.com/DISTRHO/DISTRHO-Ports)
+- [VCV Rack](https://vcvrack.com/)
 - Some libraries, for AppImages
 
 ## Important, if you wanna use this config
@@ -47,6 +51,8 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 If there's something you think could be improved about my config, just open an issue!
 
 ## License
+
 This repository is distributed under the terms of the [replicense](https://github.com/JuxGD/replicense) (rpli).
+
 - [Markdown](https://github.com/JuxGD/nixconfig/tree/main/LICENSE.md)
 - [Plain text](https://github.com/JuxGD/nixconfig/tree/main/LICENSE)
