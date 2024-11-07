@@ -25,7 +25,7 @@ in
     vcv-rack
     helm
     zynaddsubfx
-    drumkv
+    drumkv1
     surge-XT
     fluidsynth
     rakarrack
