@@ -21,7 +21,6 @@ in
     magnetophonDSP.VoiceOfFaust
     tunefish
     geonkick
-    fmsynth
     vcv-rack
     helm
     zynaddsubfx
