@@ -32,7 +32,7 @@ in
     rkrlv2
     easyeffects
     bslizr
-    jackdsp
+    jamesdsp
     delayarchitect
     plugdata
     cardinal
