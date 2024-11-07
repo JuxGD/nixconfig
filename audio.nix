@@ -36,7 +36,7 @@ in
     delayarchitect
     plugdata
     cardinal
-    distrho-ports
+    pkgs.distrho-ports
   ];
   musnix.enable = true;
 
