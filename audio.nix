@@ -19,7 +19,6 @@ in
     odin2
     padthv1
     magnetophonDSP.VoiceOfFaust
-    tunefish
     geonkick
     vcv-rack
     helm
