@@ -63,5 +63,6 @@ in
     thunderbird
     protonup-qt
     direnv
+    libinput
   ];
 }
