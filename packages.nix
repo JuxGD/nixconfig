@@ -61,7 +61,7 @@ in
     inotify-tools
     wget
     thunderbird
-    libinput
     protonup-qt
+    direnv
   ];
 }
