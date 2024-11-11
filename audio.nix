@@ -35,6 +35,7 @@ in
     plugdata
     cardinal
     distrho-ports
+    vital
   ];
 
   musnix.enable = true;
