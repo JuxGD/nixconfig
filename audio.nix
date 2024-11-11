@@ -35,7 +35,9 @@ in
     plugdata
     cardinal
     distrho-ports
+    lv2
   ];
+
   musnix.enable = true;
 
   # Enable sound with pipewire.

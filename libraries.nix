@@ -31,5 +31,6 @@ in
     libepoxy
     fontconfig
     portaudio
+    lilv
   ];
 }
