@@ -35,8 +35,6 @@ in
     plugdata
     cardinal
     distrho-ports
-    lv2
-    lilv
   ];
 
   musnix.enable = true;
