@@ -41,7 +41,11 @@ in
   musnix.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  hardware.pulseaudio = {
+    enable = true;
+    support32Bit = true;
+    extraConfig = "load-module module-null-sink sink_name=VAC\nupdate-sink-proplist STREAM device.description=Virtual_Output\nupdate-source-proplist STREAM.monitor device.description=VirtualInput\npacmd load-module module-loopback sink=VAC source=alsa_input.pci-0000_74_00.6.analog-stereo latency_msec=1";
+  };
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -53,4 +57,5 @@ in
     # no need to redefine it in your config for now)
     #media-session.enable = true;
   };
+  nixpkgs.config.pulseaudio = true;
 }

@@ -42,8 +42,9 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 - Unfree packages allowed
 - Auto optimise store enabled
 - NVIDIA drivers are version 535, because of a problem there was. Not sure if that's fixed now but oh well
-- A libinput override was attempted, to remove the debounce time for mice. This was done for Minecraft PvP
+- There's a libinput configuration to remove the debounce time for mice. This was done for Minecraft PvP
 - Change the users to your liking, you're obviously not "j" or "j2" (unless you are ig)
+- I made a virtual device, with my specific mic ID (i think that's what it is). Either take it out or change it to fit yours
 
 ## Contributing
 
