@@ -64,5 +64,12 @@ in
     protonup-qt
     direnv
     libinput
+    (pkgs.wrapOBS {
+      plugins = with pkgs.obs-studio-plugins; [
+        wlrobs
+        obs-pipewire-audio-capture
+        obs-vkcapture
+      ];
+    })
   ];
 }
