@@ -24,12 +24,10 @@ in
     slurp
     wl-clipboard
     mako
-    gnumake
     onlyoffice-bin_latest
     nodejs
     wineWowPackages.staging
     winetricks
-    gcc
     ffmpeg
     mono
     nodePackages.pnpm
