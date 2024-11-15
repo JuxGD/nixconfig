@@ -48,7 +48,6 @@ in
     cdrkit
     fuse3
     openssl
-    pkg-config
     rustup
     ryujinx
     linuxHeaders
