@@ -59,7 +59,6 @@ in
     wget
     thunderbird
     protonup-qt
-    direnv
     libinput
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
