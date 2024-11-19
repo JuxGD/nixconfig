@@ -6,11 +6,14 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
+  environment.variables.MESA_DISK_CACHE_MULTI_FILE = "1";
+
   services = {
-    
+
     xserver = {
       enable = true;
       videoDrivers = [ "nvidia" "amdgpu" ];
+      displayManager.importedVariables = [ "MESA_DISK_CACHE_MULTI_FILE" ];
     };
 
     desktopManager.plasma6.enable = true;
