@@ -50,7 +50,7 @@ in
       };
       modesetting.enable = true;
       powerManagement = { enable = false; finegrained = false; };
-      open = true;
+      open = false;
       nvidiaSettings = true;
 
       prime = {
