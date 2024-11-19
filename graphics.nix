@@ -34,7 +34,7 @@ in
     };
 
     nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.legacy_535;
+      package = config.boot.kernelPackages.nvidiaPackages.latest;
       modesetting.enable = true;
       powerManagement = { enable = false; finegrained = false; };
       open = true;
