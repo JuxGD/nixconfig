@@ -36,7 +36,7 @@ in
     nvidia = {
       modesetting.enable = true;
       powerManagement = { enable = false; finegrained = false; };
-      open = false;
+      open = true;
       nvidiaSettings = true;
 
       prime = {
