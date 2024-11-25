@@ -60,15 +60,6 @@ in
     };
   };
 
-  boot = {
-    kernelPatches = [
-      {
-        name = "NVIDIA patch for Linux 6.12";
-        patch = ./kernel-6.12.patch;
-      }
-    ];
-  };
-  
   xdg = {
     portal = {
       extraPortals = [ pkgs.xdg-desktop-portal-gtk ];

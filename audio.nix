@@ -42,6 +42,10 @@ in
     enable = true;
     rtcqs.enable = true;
     soundcardPciId = "74:00.6";
+    kernel = {
+      realtime = true;
+      packages = pkgs.linuxPackages_6_11_rt;
+    };
   };
   security.rtkit.enable = true;
   services = {
