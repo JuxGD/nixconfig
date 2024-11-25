@@ -45,7 +45,6 @@ in
     };
 
     nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.stable;
       modesetting.enable = true;
       powerManagement = { enable = false; finegrained = false; };
       open = true;
