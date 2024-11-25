@@ -38,8 +38,11 @@ in
     vital
   ];
 
-  musnix.enable = true;
-
+  musnix = {
+    enable = true;
+    rtcqs.enable = true;
+    soundcardPciId = "74:00.6";
+  };
   security.rtkit.enable = true;
   services = {
     pipewire = {

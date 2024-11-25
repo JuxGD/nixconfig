@@ -6,7 +6,12 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
-  environment.variables.MESA_DISK_CACHE_MULTI_FILE = "1";
+  environment = {
+    variables = {
+      MESA_DISK_CACHE_MULTI_FILE = "1";
+      NIXOS_OZONE_WL = "1";
+    };
+  };
 
   services = {
 
@@ -27,11 +32,14 @@ in
   };
 
   programs = {
-    hyprland.enable = true;
+    hyprland = {
+      enable = true;
+      nvidiaPatches = true;
+      xwayland.enable = true;
+    };
   };
 
   hardware = {
-
     graphics = {
       enable = true;
     };

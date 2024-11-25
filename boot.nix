@@ -7,6 +7,7 @@ let
 in
 {
   boot = {
+    kernelPackages = pkgs.linuxKenrel.kernels.linux_6_12;
     supportedFilesystems = [ "ntfs" ];
     loader = {
       systemd-boot.enable = false;
