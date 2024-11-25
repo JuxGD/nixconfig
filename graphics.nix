@@ -64,14 +64,11 @@ in
     kernelPatches = [
       {
         name = "NVIDIA patch for Linux 6.12";
-        patch = (builtins.fetchurl {
-          url = "https://github.com/Binary-Eater/open-gpu-kernel-modules/commit/8ac26d3c66ea88b0f80504bdd1e907658b41609d.patch";
-          sha256 = "sha256:053f0hx64yzxs73j3kyx7fy9l76ws71pzidd9d0p0c7h4gfi9an1";
-        });
+        patch = ./kernel-6.12.patch;
       }
     ];
   };
-
+  
   xdg = {
     portal = {
       extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
