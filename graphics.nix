@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, fetchurl, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 let
   stable = inputs.stable.legacyPackages.${pkgs.system};
@@ -64,9 +64,9 @@ in
     kernelPatches = [
       {
         name = "NVIDIA patch for Linux 6.12";
-        patch = (fetchurl {
-          url = "https://github.com/Binary-Eater/open-gpu-kernel-modules/commit/8ac26d3c66ea88b0f80504bdd1e907658b41609d.patch";
-          hash = "";
+        patch = (builtins.fetchurl {
+          url = https://github.com/Binary-Eater/open-gpu-kernel-modules/commit/8ac26d3c66ea88b0f80504bdd1e907658b41609d.patch
+          sha256 = lib.fakeSha256;
         });
       }
     ];
