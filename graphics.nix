@@ -60,6 +60,15 @@ in
     };
   };
 
+  boot = {
+    kernelPatches = {
+      [
+        name = "NVIDIA patch for Linux 6.12";
+        patch = (builtins.fetchurl https://github.com/Binary-Eater/open-gpu-kernel-modules/commit/8ac26d3c66ea88b0f80504bdd1e907658b41609d.patch);
+      ];
+    };
+  };
+
   xdg = {
     portal = {
       extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
