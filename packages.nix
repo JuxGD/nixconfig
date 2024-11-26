@@ -60,6 +60,7 @@ in
     thunderbird
     protonup-qt
     libinput
+    tofi
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs
