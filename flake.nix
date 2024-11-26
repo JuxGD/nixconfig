@@ -11,6 +11,9 @@
 
     # modules
     musnix.url = "github:musnix/musnix/master";
+
+    # program flakes
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
   outputs = { self, nixpkgs, ... }@inputs: rec {
