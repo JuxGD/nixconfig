@@ -61,6 +61,8 @@ in
     protonup-qt
     libinput
     tofi
+    waybar
+    swww
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs
