@@ -15,7 +15,6 @@ in
     open-webui = {
       enable = true;
     };
-  };
 
     forgejo.enable = true;
     gnome.gnome-keyring.enable = true;
