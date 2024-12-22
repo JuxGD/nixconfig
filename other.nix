@@ -7,15 +7,6 @@ let
 in
 {
   services = {
-    ollama = {
-      enable = true;
-      acceleration = "cuda";
-    };
-
-    open-webui = {
-      enable = true;
-    };
-
     forgejo.enable = true;
     gnome.gnome-keyring.enable = true;
   };
