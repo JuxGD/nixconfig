@@ -63,6 +63,7 @@ in
     tofi
     waybar
     swww
+    qtscrcpy
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs

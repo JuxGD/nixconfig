@@ -9,6 +9,12 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; # unstable branch is default
     staging.url = "github:NixOS/nixpkgs/staging";
 
+    # use lix
+    lix-module {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.91.1-2.tar.gz;
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # modules
     musnix.url = "github:musnix/musnix/master";
 
@@ -16,13 +22,14 @@
     hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: rec {
+  outputs = { self, nixpkgs, lix-module,  ... }@inputs: rec {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
           inputs.musnix.nixosModules.musnix
+          lix-module.nixosModules.default
           ./configuration.nix
           ./audio.nix
           ./boot.nix

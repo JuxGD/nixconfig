@@ -18,7 +18,6 @@ in
     adlplug
     odin2
     padthv1
-    magnetophonDSP.VoiceOfFaust
     geonkick
     vcv-rack
     helm
