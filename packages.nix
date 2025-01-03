@@ -38,7 +38,6 @@ in
     temurin-bin-17
     haxe
     neko
-    hashlink
     nh
     tk
     egl-wayland
