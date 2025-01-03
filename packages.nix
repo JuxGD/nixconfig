@@ -51,7 +51,6 @@ in
     linuxHeaders
     python310
     scrcpy
-    espeak
     tmux
     inotify-tools
     wget
