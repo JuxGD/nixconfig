@@ -6,6 +6,7 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 
 - [KDE Plasma 6](https://kde.org/plasma-desktop) w/ [Wayland](https://wayland.freedesktop.org)
 - [Hyprland](https://hyprland.org) is installed too but idk how to configure it
+- [Lix](https://lix.systems)
 
 ## Relevant packages, modules and programs
 
