@@ -42,7 +42,6 @@ in
     nh
     tk
     egl-wayland
-    looking-glass-client
     git
     unzip
     cdrkit
