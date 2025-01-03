@@ -7,7 +7,6 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
-    carla
     yabridge
     yabridgectl
     lsp-plugins
