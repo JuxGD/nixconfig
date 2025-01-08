@@ -43,6 +43,8 @@ in
 
       xwayland.enable = true;
     };
+
+    xwayland.enable = true;
   };
 
   hardware = {
