@@ -61,6 +61,7 @@ in
     waybar
     swww
     qtscrcpy
+    keepassxc-go
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs

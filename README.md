@@ -5,13 +5,13 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 ## Main features
 
 - [KDE Plasma 6](https://kde.org/plasma-desktop) w/ [Wayland](https://wayland.freedesktop.org)
-- [Hyprland](https://hyprland.org) is installed too but idk how to configure it
 - [Lix](https://lix.systems)
 
 ## Relevant packages, modules and programs
 
 - [Floorp](https://floorp.app/en)
-- [Ollama](https://ollama.com)
+- [Thunderbird](https://thunderbird.net)
+- [Ollama](https://ollama.com) w/ [Open WebUI](https://openwebui.com)
 - [Docker](https://docker.com)
 - [Podman](https://podman.io)
 - [Distrobox](https://distrobox.it)
@@ -22,7 +22,7 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 - [Mono](https://mono-project.com)
 - [gcc](https://gcc.gnu.org)
 - [FFmpeg](https://ffmpeg.org)
-- [Haxe](https://haxe.org) w/ [Neko/NekoVM](https://nekovm.org/) & [HashLink](https://hashlink.haxe.org)
+- [Haxe](https://haxe.org) w/ [Neko/NekoVM](https://nekovm.org/)
 - [Carla](https://kx.studio/Applications:Carla)
 - [yabridge](https://github.com/robert-vdh/yabridge) w/ yabridgectl
 - [git](https://git-scm.com)
@@ -32,7 +32,8 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 - [LSP](https://lsp-plug.in/)
 - [DISTRHO Ports](https://github.com/DISTRHO/DISTRHO-Ports)
 - [VCV Rack](https://vcvrack.com/)
-- Some libraries, for AppImages
+- [QtScrcpy](https://github.com/barry-ran/QtScrcpy)
+- [KeePassXC](https://keepassxc.org)
 
 ## Important, if you wanna use this config
 
