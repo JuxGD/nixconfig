@@ -11,6 +11,11 @@ in
       enable = true;
       powerOnBoot = true;
     };
+
+    opentabletdriver = {
+      enable = true;
+      daemon.enable = true;
+    };
   };
 
   environment = {
