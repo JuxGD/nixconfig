@@ -16,6 +16,8 @@ in
       enable = true;
       daemon.enable = true;
     };
+
+    nvidia-container-toolkit.enable = true;
   };
 
   environment = {
