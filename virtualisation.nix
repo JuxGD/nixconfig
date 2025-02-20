@@ -16,7 +16,12 @@ in
     };
 
     podman.enable = true;
-    libvirtd.enable = true;
+
+    libvirtd = {
+      enable = true;
+      qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+    };
+
     waydroid.enable = true;
   };
   
