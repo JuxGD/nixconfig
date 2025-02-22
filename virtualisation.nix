@@ -35,7 +35,7 @@ in
   options.vfio.enable = with lib;
     mkEnableOption "Configure the machine for VFIO";
   
-  config = let cfg = config.vfio; {
+  config = let cfg = config.vfio;
     in {
       boot = {
         initrd.kernelModules = [
