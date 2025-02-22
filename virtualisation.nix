@@ -52,7 +52,7 @@ in
 
         kernelParams = [
           "amd_iommu=on"
-        ]; ++ lib.optional cfg.enable
+        ] ++ lib.optional cfg.enable
           # Isolate the GPU
           ("vfio-pci.ids=" + lib.concatStrginsSep "," gpuIDs);
       };
