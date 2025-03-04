@@ -24,5 +24,10 @@ in
     extraModprobeConfig = ''
       options snd slots=snd-hda-intel
     '';
+
+    kernelPackages = [
+      linuxKernel.kernels.linux_6_13
+      linuxKernel.packages.linux_6_13.nvidia_x11
+    ];
   };
 }
