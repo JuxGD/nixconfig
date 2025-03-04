@@ -62,7 +62,7 @@ in
     swww
     qtscrcpy
     keepassxc
-    carla
+    stable.carla
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs
