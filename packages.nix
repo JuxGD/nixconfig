@@ -63,6 +63,8 @@ in
     qtscrcpy
     keepassxc
     stable.carla
+    gnupg
+    pinentry
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs
