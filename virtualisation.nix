@@ -1,10 +1,4 @@
-\let
-  # RTX 3070 Ti
-  gpuIDs = [
-    "10de:24a0" # Graphics
-    "10de:228b" # Audio
-  ];
-in { config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 let
   stable = inputs.stable.legacyPackages.${pkgs.system};
