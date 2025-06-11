@@ -19,7 +19,7 @@ in
 
     libvirtd = {
       enable = true;
-      qemu.vhostUserPackages = [ virtiofsd ];
+      qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
     };
 
     spiceUSBRedirection.enable = true;
