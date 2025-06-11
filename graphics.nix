@@ -38,7 +38,6 @@ in
 
   programs = {
     xwayland.enable = true;
-    niri.enable = true;
   };
 
   hardware = {

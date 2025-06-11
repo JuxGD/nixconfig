@@ -14,7 +14,55 @@ in
 {
   options.vfio.enable = with lib;
     mkEnableOption "Configure the machine for VFIO";
-  boot.loader.grub.extraConfig = "amd_iommu=on";
-  boot.kernelParams = [ "amd_iommu=on", "vfio_pci.ids=10de:24a0,10de:228b" ];
-  boot.kernelModules = [ "vfio" "vfio_pci" "vfio_iommu_type1" ];
+  
+  config = let cfg = config.vfio;
+    in {
+      virtualisation = {
+        docker = {
+          enable = true;
+          rootless = {
+            enable = true;
+            setSocketVariable = true;
+          };
+        };
+
+        podman.enable = true;
+
+        libvirtd = {
+          enable = true;
+          qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+        };
+
+        spiceUSBRedirection.enable = true;
+
+        waydroid.enable = true;
+      };
+
+      programs = {
+        virt-manager.enable = true;
+      };
+
+      boot = {
+        initrd.kernelModules = [
+          "vfio_pci"
+          "vfio"
+          "vfio_iommu_type1"
+
+          "nvidia"
+          "nvidia_modeset"
+          "nvidia_uvm"
+          "nvidia_drm"
+        ];
+
+        kernelParams = [
+          "amd_iommu=on"
+        ] ++ lib.optional cfg.enable
+          # Isolate the GPU
+          ("vfio-pci.ids=" + lib.concatStringsSep "," gpuIDs);
+      };
+      specialisation."VFIO".configuration = {
+        system.nixos.tags = [ "with-vfio" ];
+        vfio.enable = true;
+      };
+    };
 }
