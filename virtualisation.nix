@@ -6,32 +6,33 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
-  virtualisation = {
-    docker = {
-      enable = true;
-      rootless = {
-        enable = true;
-        setSocketVariable = true;
-      };
-    };
-
-    podman.enable = true;
-
-    libvirtd = {
-      enable = true;
-      qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
-    };
-
-    spiceUSBRedirection.enable = true;
-
-    waydroid.enable = true;
-  };
-
   options.vfio.enable = with lib;
     mkEnableOption "Configure machine for VFIO";
 
   config = let cfg = config.vfio; 
   in {
+  
+    virtualisation = {
+      docker = {
+        enable = true;
+        rootless = {
+          enable = true;
+          setSocketVariable = true;
+        };
+      };
+
+      podman.enable = true;
+
+      libvirtd = {
+        enable = true;
+        qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+      };
+
+      spiceUSBRedirection.enable = true;
+
+      waydroid.enable = true;
+    };
+
     boot.loader.grub.extraConfig = "amd_iommu=on";
     boot.kernelParams = [ "amd_iommu=on" "vfio_pci.ids=10de:24a0,10de:228b" ];
     boot.kernelModules = [ "vfio" "vfio_pci" "vfio_iommu_type1" "nvidia" "nvidia_modeset" "nvidia_urm" "nvidia_drm" ];
