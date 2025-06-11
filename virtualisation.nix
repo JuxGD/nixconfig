@@ -33,7 +33,7 @@ in
           qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
         };
 
-        spiceUSBRedirection.enable = true;
+        spiceUSBRedirection = true;
 
         waydroid.enable = true;
       };
