@@ -77,7 +77,6 @@ in
     portal = {
       xdgOpenUsePortal = true;
       enable = true;
-      config.common.default = "gtk";
     };
   };
 }
