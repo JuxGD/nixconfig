@@ -25,6 +25,6 @@ in
       options snd slots=snd-hda-intel
     '';
 
-    kernelPackages = pkgs.linuxKernel.packages.linux_6_13;
+    kernelPackages = pkgs.linuxKernel.kernels.linux_6_13;
   };
 }
