@@ -28,12 +28,12 @@ in
     rkrlv2
     easyeffects
     bslizr
-    jamesdsp
     delayarchitect
     plugdata
     cardinal
     distrho-ports
     vital
+    stable.jamesdsp
   ];
 
   musnix = {
