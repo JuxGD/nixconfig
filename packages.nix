@@ -63,6 +63,7 @@ in
     qtscrcpy
     keepassxc
     stable.carla
+    alacritty
     (pkgs.wrapOBS {
       plugins = with pkgs.obs-studio-plugins; [
         wlrobs
