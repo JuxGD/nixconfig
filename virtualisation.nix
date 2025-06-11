@@ -28,6 +28,8 @@ in
         qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
       };
 
+      programs.virt-manager.enable = true;
+
       spiceUSBRedirection.enable = true;
 
       waydroid.enable = true;
