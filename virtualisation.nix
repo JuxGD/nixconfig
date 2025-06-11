@@ -32,9 +32,9 @@ in
 
   config = let cfg = config.vfio; 
   in {
-    boot.loader.grub.extraConfig = "amd_iommu=on";
-    boot.kernelParams = [ "amd_iommu=on" "vfio_pci.ids=10de:24a0,10de:228b" ];
-    boot.kernelModules = [ "vfio" "vfio_pci" "vfio_iommu_type1" "nvidia" "nvidia_modeset" "nvidia_urm" "nvidia_drm" ];
+    config.boot.loader.grub.extraConfig = "amd_iommu=on";
+    config.boot.kernelParams = [ "amd_iommu=on" "vfio_pci.ids=10de:24a0,10de:228b" ];
+    config.boot.kernelModules = [ "vfio" "vfio_pci" "vfio_iommu_type1" "nvidia" "nvidia_modeset" "nvidia_urm" "nvidia_drm" ];
 
     specialisation."VFIO".configuration = {
       system.nixos.tags = [ "with-vfio" ];
