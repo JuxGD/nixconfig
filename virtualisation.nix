@@ -12,36 +12,31 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
+  virtualisation = {
+    docker = {
+      enable = true;
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+      };
+    };
+
+    podman.enable = true;
+
+    libvirtd = {
+      enable = true;
+      qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
+    };
+    spiceUSBRedirection = true;
+
+    waydroid.enable = true;
+  };
+
   options.vfio.enable = with lib;
     mkEnableOption "Configure the machine for VFIO";
   
   config = let cfg = config.vfio;
     in {
-      virtualisation = {
-        docker = {
-          enable = true;
-          rootless = {
-            enable = true;
-            setSocketVariable = true;
-          };
-        };
-
-        podman.enable = true;
-
-        libvirtd = {
-          enable = true;
-          qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
-        };
-
-        spiceUSBRedirection = true;
-
-        waydroid.enable = true;
-      };
-
-      programs = {
-        virt-manager.enable = true;
-      };
-
       boot = {
         initrd.kernelModules = [
           "vfio_pci"
@@ -65,5 +60,8 @@ in
         system.nixos.tags = [ "with-vfio" ];
         vfio.enable = true;
       };
+    };
+    programs = {
+      virt-manager.enable = true;
     };
 }
