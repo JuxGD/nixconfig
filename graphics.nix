@@ -43,14 +43,6 @@ in
     niri.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [
-    kdePackages.plasma-browser-integration
-    kdePackages.xdg-desktop-portal-kde
-    kdePackages.kwayland
-    kdePackages.kpipewire
-    wayland-utils
-  ];
-
   hardware = {
     graphics = {
       enable = true;
@@ -75,7 +67,7 @@ in
 
   xdg = {
     portal = {
-      xdgOpenUsePortal = true;
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
       enable = true;
       config.common.default = "gtk";
     };
