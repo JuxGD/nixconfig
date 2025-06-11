@@ -11,9 +11,7 @@ in
 
   config = let cfg = config.vfio; 
   in {
-
-    programs.virt-manager.enable = true;
-
+  
     virtualisation = {
       docker = {
         enable = true;
@@ -29,6 +27,9 @@ in
         enable = true;
         qemu.vhostUserPackages = with pkgs; [ virtiofsd ];
       };
+
+      programs.virt-manager.enable = true;
+
       spiceUSBRedirection.enable = true;
 
       waydroid.enable = true;
