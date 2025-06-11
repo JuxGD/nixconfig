@@ -38,7 +38,8 @@
           ./networking.nix
           ./packages.nix
           ./users.nix
-	          ./other.nix
+          ./virtualisation.nix
+          ./other.nix
         ];
       };
     };
