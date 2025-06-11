@@ -59,7 +59,7 @@ in
           "amd_iommu=on"
         ] ++ lib.optional cfg.enable
           # Isolate the GPU
-          ("vfio-pci.ids=" + lib.concatStrginsSep "," gpuIDs);
+          ("vfio-pci.ids=" + lib.concatStringsSep "," gpuIDs);
       };
       specialisation."VFIO".configuration = {
         system.nixos.tags = [ "with-vfio" ];
