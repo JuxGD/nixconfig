@@ -13,7 +13,7 @@ in
     };
   };
 
-  boot.initrd.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_urm" "nvidia_drm" ];
+  boot.initrd.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
 
   services = {
 
