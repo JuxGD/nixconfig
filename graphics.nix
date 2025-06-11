@@ -13,6 +13,8 @@ in
     };
   };
 
+  boot.initrd.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_urm" "nvidia_drm" ];
+
   services = {
 
     xserver = {
