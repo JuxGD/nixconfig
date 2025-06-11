@@ -38,6 +38,8 @@ in
     kdeconnect.enable = true;
     light.enable = true;
     zsh.enable = true;
+    gnupg.agent.enable = true;
+    gnupg.agent.enableSSHSupport = true;
   };
 
   # Allow unfree packages
