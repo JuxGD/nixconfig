@@ -64,12 +64,5 @@ in
     keepassxc
     stable.carla
     alacritty
-    (pkgs.wrapOBS {
-      plugins = with pkgs.obs-studio-plugins; [
-        wlrobs
-        obs-pipewire-audio-capture
-        obs-vkcapture
-      ];
-    })
   ];
 }
