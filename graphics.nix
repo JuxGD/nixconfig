@@ -23,7 +23,11 @@ in
       displayManager.importedVariables = [ "MESA_DISK_CACHE_MULTI_FILE" ];
     };
 
-    desktopManager.plasma6.enable = true;
+    desktopManager.plasma6 = {
+      enable = true;
+      enableQt5Integration = true;
+    };
+
     displayManager = {
       sddm = {
         enable = true;
