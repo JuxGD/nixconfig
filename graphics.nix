@@ -53,6 +53,7 @@ in
     kdePackages.kwayland
     kdePackages.kpipewire
     wayland-utils
+    qt5compat
   ];
 
   hardware = {
