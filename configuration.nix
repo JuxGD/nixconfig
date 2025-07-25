@@ -29,7 +29,6 @@ in
   };
 
   security.polkit.enable = true;
-  services.polkit-gnome.enable = true;
 
   environment = {
     extraOutputsToInstall = [ "dev" ];
