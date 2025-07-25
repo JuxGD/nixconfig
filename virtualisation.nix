@@ -6,10 +6,6 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
-  environment.systemPackages = with pkgs; [
-    distrobox
-  ];
-
   options.vfio.enable = with lib;
     mkEnableOption "Configure machine for VFIO";
 
@@ -26,6 +22,10 @@ in
           setSocketVariable = true;
         };
       };
+
+      environment.systemPackages = with pkgs; [
+        distrobox
+      ];
 
       podman.enable = true;
 
