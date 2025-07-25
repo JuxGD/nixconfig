@@ -32,5 +32,6 @@ in
     onlyoffice-bin_latest
     nh
     f3
+    caffeine-ng
   ];
 }
