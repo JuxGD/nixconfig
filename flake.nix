@@ -27,19 +27,21 @@
         modules = [
           inputs.musnix.nixosModules.musnix
           lix-module.nixosModules.default
-          ./configuration.nix
           ./audio.nix
           ./boot.nix
+          ./configuration.nix
+          ./desktop.nix
+          ./development.nix
           ./fonts.nix
           ./gaming.nix
           ./graphics.nix
           ./hardware.nix
           ./libraries.nix
           ./networking.nix
-          ./packages.nix
+          ./other.nix
+          ./tools.nix
           ./users.nix
           ./virtualisation.nix
-          ./other.nix
         ];
       };
     };
