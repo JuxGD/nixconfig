@@ -29,6 +29,9 @@ in
   };
 
   security.polkit.enable = true;
+  services.polkit-gnome.enable = true;
+
+  services.caffeine.enable = true;
 
   environment = {
     extraOutputsToInstall = [ "dev" ];

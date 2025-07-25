@@ -6,6 +6,10 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
+  environment.systemPackages = with pkgs; [
+    acl
+  ];
+
   users = {
     users = {
 
@@ -22,7 +26,6 @@ in
         shell = pkgs.zsh;
         extraGroups = [ "wheel" "networkmanager" "libvirtd" "video" "jackaudio" "audio" ];
       };
-
     };
   };
 }

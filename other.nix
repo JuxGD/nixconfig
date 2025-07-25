@@ -14,6 +14,17 @@ in
       enable = true;
       acceleration = "cuda";
     };
+
+    open-webui = {
+      enable = true;
+      environment = {
+        ANONYMIZED_TELEMETRY = "False";
+        DO_NOT_TRACK = "True";
+        SCARF_NO_ANALYTICS = "True";
+        WEBUI_AUTH = "False";
+      };
+    };
+
   };
   programs.obs-studio = {
     enable = true;

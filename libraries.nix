@@ -10,5 +10,6 @@ in
   programs.nix-ld.libraries = with pkgs; [
     libappindicator
     libayatana-appindicator
+    openssl
   ];
 }

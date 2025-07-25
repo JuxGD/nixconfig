@@ -8,9 +8,19 @@ in
 {
   programs = {
     gamemode.enable = true;
+    gamescope.enable = true;
+
     steam = {
       enable = true;
+      package = (pkgs.steam.override {
+        extraPkgs = (pkgs: [
+          pkgs.corefonts
+          pkgs.vistafonts
+        ]);
+      });
+
       gamescopeSession.enable = true;
+
     };
   };
 }

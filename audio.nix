@@ -7,6 +7,9 @@ let
 in
 {
   environment.systemPackages = with pkgs; [
+    mpd
+    carla
+    bespokesynth
     yabridge
     yabridgectl
     lsp-plugins

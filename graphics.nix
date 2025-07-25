@@ -11,6 +11,11 @@ in
       MESA_DISK_CACHE_MULTI_FILE = "1";
       NIXOS_OZONE_WL = "1";
     };
+
+    systemPackages = with pkgs; [
+      tk
+      egl-wayland
+    ];
   };
 
   boot.initrd.kernelModules = [ "nvidia" "nvidia_modeset" "nvidia_uvm" "nvidia_drm" ];
@@ -22,39 +27,7 @@ in
       videoDrivers = [ "nvidia" "amdgpu" ];
       displayManager.importedVariables = [ "MESA_DISK_CACHE_MULTI_FILE" ];
     };
-
-    desktopManager.plasma6 = {
-      enable = true;
-      enableQt5Integration = true;
-    };
-
-    displayManager = {
-      sddm = {
-        enable = true;
-        wayland.enable = true;
-      };
-      defaultSession = "plasma";
-    };
   };
-
-  nix.settings = {
-    substituters = [ "https://hyprland.cachix.org" ];
-    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
-  };
-
-  programs = {
-    xwayland.enable = true;
-    niri.enable = true;
-  };
-
-  environment.systemPackages = with pkgs; [
-    kdePackages.plasma-browser-integration
-    kdePackages.xdg-desktop-portal-kde
-    kdePackages.kwayland
-    kdePackages.kpipewire
-    wayland-utils
-    kdePackages.qt5compat
-  ];
 
   hardware = {
     graphics = {
@@ -75,13 +48,6 @@ in
           enableOffloadCmd = true;
         };
       };
-    };
-  };
-
-  xdg = {
-    portal = {
-      xdgOpenUsePortal = true;
-      enable = true;
     };
   };
 }
