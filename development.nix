@@ -13,7 +13,9 @@ in
     cudaPackages.cudnn
     cudaPackages.cutensor
     cmake
-    python3Full
+    (python3.override {
+      bluezSupport = true;
+    })
     android-tools
     rustup
     haxe
