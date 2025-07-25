@@ -23,10 +23,6 @@ in
         };
       };
 
-      environment.systemPackages = with pkgs; [
-        distrobox
-      ];
-
       podman.enable = true;
 
       libvirtd = {
@@ -37,6 +33,10 @@ in
 
       waydroid.enable = true;
     };
+
+    environment.systemPackages = with pkgs; [
+      distrobox
+    ];
 
     specialisation."VFIO".configuration = {
       system.nixos.tags = [ "with-vfio" ];
