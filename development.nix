@@ -13,10 +13,8 @@ in
     cudaPackages.cudnn
     cudaPackages.cutensor
     cmake
-    (pkgs.python3.override {
-      bluezSupport = true;
-    })
-    android-tools    
+    python3Full
+    android-tools
     rustup
     haxe
     neko
