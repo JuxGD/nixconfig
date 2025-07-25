@@ -22,6 +22,8 @@ in
       anyrun
       wlogout
       swaybg
+      swaylock
+      swayidle
     ];
   };
 
@@ -34,9 +36,6 @@ in
         };
       };
     };
-
-    swayidle.enable = true;
-    swaylock.enable = true;
   };
 
   nix.settings = {
