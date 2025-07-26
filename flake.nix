@@ -4,7 +4,7 @@
 
   inputs = {
     # nixpkgs branches
-    stable.url = "github:NixOS/nixpkgs/nixos-24.11";
+    stable.url = "github:NixOS/nixpkgs/nixos-25.05";
     master.url = "github:NixOS/nixpkgs/master"; 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; # unstable branch is default
     staging.url = "github:NixOS/nixpkgs/staging";
