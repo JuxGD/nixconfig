@@ -36,6 +36,10 @@ in
         };
       };
     };
+
+    desktopManager.plasma6 = {
+      enable = true;
+    };
   };
 
   nix.settings = {
