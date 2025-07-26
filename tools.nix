@@ -10,7 +10,7 @@ in
 
   environment.systemPackages = with pkgs ; [
     floorp
-    alacritty
+    kitty
     tmux
     inotify-tools
     scrcpy
