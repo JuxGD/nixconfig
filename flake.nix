@@ -17,13 +17,23 @@
 
     # modules
     musnix.url = "github:musnix/musnix/master";
+
+    systems.url = "github:nix-systems/default";
+
     nur = {
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = { self, nixpkgs, lix-module,  ... }@inputs: rec {
+  outputs = { self, nixpkgs, lix-module,  ... }@inputs:
+  let
+    forAllSystems =
+      function:
+      nixpkgs.lib.genAttrs (import systems) {
+        system: function nixpkgs.legacyPackages.${system}
+      };
+  in rec {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
