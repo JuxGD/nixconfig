@@ -30,9 +30,9 @@
   let
     forAllSystems =
       function:
-      nixpkgs.lib.genAttrs (import systems) {
+      nixpkgs.lib.genAttrs (import systems) (
         system: function nixpkgs.legacyPackages.${system}
-      };
+      );
   in rec {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
