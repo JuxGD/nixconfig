@@ -26,7 +26,7 @@
     };
   };
 
-  outputs = { self, systems, nixpkgs, lix-module,  ... }@inputs: rec {
+  outputs = { self, nur, nixpkgs, lix-module,  ... }@inputs: rec {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
