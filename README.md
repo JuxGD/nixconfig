@@ -40,7 +40,7 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 - [zsh](https://zsh.org)
 - [musnix](https://github.com/musnix/musnix)
 - [Forgejo](https://forgejo.org)
-- [LSP](https://lsp-plug.in/)
+- [LSP](https://lsp-plug.in)
 - [DISTRHO Ports](https://github.com/DISTRHO/DISTRHO-Ports)
 - [VCV Rack](https://vcvrack.com/)
 - [Scrcpy](https://github.com/Genymobile/scrcpy)

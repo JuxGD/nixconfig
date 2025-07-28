@@ -31,6 +31,7 @@
         modules = [
           inputs.musnix.nixosModules.musnix
           lix-module.nixosModules.default
+          nur.modules.nixos.default
           ./audio.nix
           ./boot.nix
           ./configuration.nix
