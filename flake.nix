@@ -18,7 +18,8 @@
     # modules
     musnix.url = "github:musnix/musnix/master";
 
-    systems.url = "github:nix-systems/default";
+    flake-utils.url = "github:numtide/flake-utils";
+    };
 
     nur = {
       url = "github:nix-community/NUR/main";
@@ -26,14 +27,7 @@
     };
   };
 
-  outputs = { self, systems, nixpkgs, lix-module,  ... }@inputs:
-  let
-    forAllSystems =
-      function:
-      nixpkgs.lib.genAttrs (import systems) (
-        system: function nixpkgs.legacyPackages.${system}
-      );
-  in rec {
+  outputs = { self, systems, nixpkgs, lix-module,  ... }@inputs: rec {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
