@@ -26,7 +26,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, lix-module,  ... }@inputs:
+  outputs = { self, systems, nixpkgs, lix-module,  ... }@inputs:
   let
     forAllSystems =
       function:
