@@ -19,7 +19,6 @@
     musnix.url = "github:musnix/musnix/master";
 
     flake-utils.url = "github:numtide/flake-utils";
-    };
 
     nur = {
       url = "github:nix-community/NUR/main";
