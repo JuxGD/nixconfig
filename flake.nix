@@ -24,7 +24,7 @@
     };
   };
 
-  outputs = { self, nur, nixpkgs, lix-module,  ... }@inputs: rec {
+  outputs = { self, nixpkgs, lix-module,  ... }@inputs: rec {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -32,7 +32,6 @@
         modules = [
           inputs.musnix.nixosModules.musnix
           lix-module.nixosModules.default
-          nur.modules.nixos.default
           ./audio.nix
           ./boot.nix
           ./configuration.nix
