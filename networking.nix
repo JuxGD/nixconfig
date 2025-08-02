@@ -6,8 +6,6 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
-  services.dnsmasq.enable = true;
-
   networking = {
     hostName = "jpc";
     networkmanager = {
