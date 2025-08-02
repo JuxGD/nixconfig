@@ -11,8 +11,10 @@ in
     networkmanager = {
       enable = true;
     };
+
     firewall = {
       allowedTCPPorts = [ 8080 ];
+      trustedInterfaces = [ "virbr0" ];
       # firewall.allowedUDPPorts = [ ... ]; # Open ports in the firewall.
       # Or disable the firewall altogether.
       # firewall.enable = false;
