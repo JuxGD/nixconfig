@@ -12,6 +12,6 @@ in
     libayatana-appindicator
     openssl
     libvlc
-    libX11
+    xorg.libX11
   ];
 }
