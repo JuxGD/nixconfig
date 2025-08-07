@@ -11,5 +11,6 @@ in
     libappindicator
     libayatana-appindicator
     openssl
+    libvlc
   ];
 }
