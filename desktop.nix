@@ -24,6 +24,7 @@ in
       swaybg
       swaylock
       swayidle
+      waybar
     ];
   };
 
@@ -51,6 +52,5 @@ in
   programs = {
     xwayland.enable = true;
     niri.enable = true;
-    waybar.enable = true;
   };
 }
