@@ -20,6 +20,7 @@ in
       open-sans
       corefonts
       liberation_ttf
+      nerdfonts
     ];
   };
 }
