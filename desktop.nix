@@ -25,6 +25,7 @@ in
       swaylock
       swayidle
       waybar
+      btop
     ];
   };
 
