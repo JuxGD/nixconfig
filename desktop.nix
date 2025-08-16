@@ -21,7 +21,7 @@ in
       mako
       walker
       wlogout
-      swaybg
+      swww
       swaylock
       swayidle
       waybar
