@@ -19,7 +19,7 @@ in
       slurp
       wl-clipboard
       mako
-      anyrun
+      walker
       wlogout
       swaybg
       swaylock
