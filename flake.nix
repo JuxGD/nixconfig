@@ -25,7 +25,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, lix-module,  ... }@inputs: rec {
+  outputs = { self, nixpkgs,  ... }@inputs: rec { # add back lix-module when lix is reenabled
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
