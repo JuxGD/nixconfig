@@ -10,10 +10,11 @@
     staging.url = "github:NixOS/nixpkgs/staging";
 
     # use lix
-    lix-module = {
-      url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.3-1.tar.gz";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # (as of august 17th 2025 it's not working, so let's not use it for now
+    # lix-module = {
+    #   url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.3-1.tar.gz";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     # modules
     musnix.url = "github:musnix/musnix/master";
@@ -31,7 +32,7 @@
         specialArgs = { inherit inputs; };
         modules = [
           inputs.musnix.nixosModules.musnix
-          lix-module.nixosModules.default
+          # lix-module.nixosModules.default
           ./audio.nix
           ./boot.nix
           ./configuration.nix
