@@ -16,6 +16,7 @@ in
     };
 
     open-webui = {
+      openFirewall = true;
       enable = true;
       environment = {
         ANONYMIZED_TELEMETRY = "False";
