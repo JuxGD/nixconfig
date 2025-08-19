@@ -42,6 +42,16 @@ in
     gnupg.agent.enableSSHSupport = true;
   };
 
+  services = {
+    flatpak = {
+      enable = true;
+      update.onActivation = true;
+      packages = [
+        "org.flatpak.Builder"
+      ];
+    };
+  };
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

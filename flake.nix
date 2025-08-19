@@ -23,14 +23,18 @@
       url = "github:nix-community/NUR/main";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
   };
 
-  outputs = { self, nixpkgs,  ... }@inputs: rec { # add back lix-module when lix is reenabled
+  outputs = { self, nixpkgs, nix-flatpak, ... }@inputs: rec { # add back lix-module when lix is reenabled
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         specialArgs = { inherit inputs; };
         modules = [
+          nix-flatpak.nixosModules.nix-flatpak
           inputs.musnix.nixosModules.musnix
           # lix-module.nixosModules.default
           ./audio.nix
