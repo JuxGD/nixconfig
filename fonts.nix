@@ -19,6 +19,7 @@ in
       source-han-serif-japanese
       open-sans
       corefonts
+      vista-fonts
       liberation_ttf
       nerd-fonts.iosevka
     ];
