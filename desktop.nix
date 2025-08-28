@@ -12,10 +12,6 @@ in
       NIXOS_OZONE_WL = "1";
     };
 
-  xdg.portal.extraPortals = with pkgs; [
-    xdg-desktop-portal-gnome 
-  ];
-
     systemPackages = with pkgs; [
       xwayland-satellite
       wayland-utils
@@ -58,4 +54,9 @@ in
     xwayland.enable = true;
     niri.enable = true;
   };
+
+  xdg.portal.extraPortals = with pkgs; [
+    xdg-desktop-portal-gnome
+  ];
+
 }
