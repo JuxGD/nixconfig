@@ -1,4 +1,4 @@
- pkgs, lib, config, inputs, ... }:
+{ pkgs, lib, config, inputs, ... }:
 
 let
   stable = inputs.stable.legacyPackages.${pkgs.system};
@@ -13,7 +13,7 @@ in
     };
 
   xdg.portal.extraPortals = with pkgs; [
-    xdg-desktop-portal-gnome // comment made to commit again bc i had a wrong message
+    xdg-desktop-portal-gnome 
   ];
 
     systemPackages = with pkgs; [
