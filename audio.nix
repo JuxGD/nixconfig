@@ -67,14 +67,24 @@ in
 
       extraConfig.pipewire = {
 	"obs-thingy" = {
-	  context.exec = [
+	  context.objects = [
 	    {
-	      path = "pw-link";
-	      args = "alsa_input.pci-0000_74_00.6.analog-stereo:capture_FL obs-thingy-sourcething:input_FL"; 
+	      factory = link-factory;
+	      args = {
+		link.output.node = "alsa_input.pci_0000_74_00.6.analog-stereo";
+		link.output.port = "capture_FL";
+		link.input.node = "obs-thingy-sourcething";
+		link.input.port = "input_FL"
+	      };
 	    }
 	    {
-	      path = "pw-link";
-	      args = "alsa_input.pci-0000_74_00.6.analog-stereo:capture_FR obs-thingy-sourcething:input_FR";
+	      factory = link-factory;
+	      args = {
+		link.output.nore = "alsa_input.pci_0000_74_00.6.analog-stereo";
+		link.output.port = "capture_FR";
+		link.input.node = "obs-thingy-sourcething";
+		link.input.port = "input_FR";
+	      };
 	    }
 	  ];
 	};
@@ -83,11 +93,5 @@ in
       # no need to redefine it in your config for now)
       #media-session.enable = true;
     };
-  };
-
-  systemd.services.get-obs-thingy-sourcething-id = {
-    description = "Get the ID for the `obs-thingy-sourcething` PipeWire object and print it to a file";
-    serviceConfig.ExecStart = "${pkgs.wireplumber}/bin/wpctl status";
-    wantedBy = [ "default.target" ];
   };
 }
