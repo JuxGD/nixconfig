@@ -91,7 +91,7 @@ in
 
   systemd.services.get-obs-thingy-sourcething-id = {
     description = "Get the ID for the `obs-thingy-sourcething` PipeWire object and print it to a file";
-    serviceConfig.ExecStart = "/home/j/Scripts/get-obs-thingy-sourcething-id";
+    serviceConfig.ExecStart = "/home/j/Scripts/get-obs-thingy-sourcething-id.sh";
     wantedBy = [ "default.target" ];
   };
 }
