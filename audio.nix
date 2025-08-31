@@ -79,7 +79,7 @@ in
 	    {
 	      path = pw-link;
 	      args = "alsa_input.pci-0000_74_00.6.analog-stereo:capture_FR obs-thingy-sourcething:input_FR";
-	    }
+	    };
 	  ];
 	}
       };
