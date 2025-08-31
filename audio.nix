@@ -59,10 +59,6 @@ in
 	  "pulse.cmd" = [
 	    {
 	      cmd = "load-module";
-	      args = "module-null-sink media.class=Audio/Sink sink_name=obs-thingy channel_map=stereo";
-	    }
-	    {
-	      cmd = "load-module";
 	      args = "module-null-sink media.class=Audio/Source/Virtual sink_name=obs-thingy-sourcething channel_map=front-left,front-right";
 	    }
 	  ];
