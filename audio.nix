@@ -69,7 +69,7 @@ in
 	"obs-thingy" = {
 	  context.objects = [
 	    {
-	      factory = link-factory;
+	      factory = "link-factory";
 	      args = {
 		link.output.node = "alsa_input.pci_0000_74_00.6.analog-stereo";
 		link.output.port = "capture_FL";
@@ -78,7 +78,7 @@ in
 	      };
 	    }
 	    {
-	      factory = link-factory;
+	      factory = "link-factory";
 	      args = {
 		link.output.nore = "alsa_input.pci_0000_74_00.6.analog-stereo";
 		link.output.port = "capture_FR";
