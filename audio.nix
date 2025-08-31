@@ -90,8 +90,8 @@ in
   };
 
   systemd.services.get-obs-thingy-sourcething-id = {
-    description = "Get the ID for the `obs-thingy-sourcething` PipeWire object and print it to a file"
-    serviceConfig.ExecStart = "wpctl status | grep -A 5 Sources | grep obs | cut -c 1-20 | grep -o '[0-9]\+' >> /home/j/Scripts/obs-thingy-sourcething.txt"
-    wantedBy = [ "default.target" ]
+    description = "Get the ID for the `obs-thingy-sourcething` PipeWire object and print it to a file";
+    serviceConfig.ExecStart = "wpctl status | grep -A 5 Sources | grep obs | cut -c 1-20 | grep -o '[0-9]\+' >> /home/j/Scripts/obs-thingy-sourcething.txt";
+    wantedBy = [ "default.target" ];
   };
 }
