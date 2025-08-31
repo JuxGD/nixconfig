@@ -50,8 +50,11 @@ in
     jamesdsp
     patchage
     pulseaudio
+  ];
+
+  environment.systemPackages = [ # for the obs thing bc it's not in nixpkgs
     getOBSThingySourcethingID
-];
+  ];
 
   musnix = {
     enable = true;
