@@ -79,9 +79,9 @@ in
 	    {
 	      path = pw-link;
 	      args = "alsa_input.pci-0000_74_00.6.analog-stereo:capture_FR obs-thingy-sourcething:input_FR";
-	    };
+	    }
 	  ];
-	}
+	};
       };
       # use the example session manager (no others are packaged yet so this is enabled by defau>
       # no need to redefine it in your config for now)
