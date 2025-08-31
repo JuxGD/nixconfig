@@ -64,31 +64,6 @@ in
 	  ];
 	};
       };
-
-      extraConfig.pipewire = {
-	"obs-thingy" = {
-	  context.objects = [
-	    {
-	      factory = "link-factory";
-	      args = {
-		link.output.node = "alsa_input.pci_0000_74_00.6.analog-stereo";
-		link.output.port = "capture_FL";
-		link.input.node = "obs-thingy-sourcething";
-		link.input.port = "input_FL";
-	      };
-	    }
-	    {
-	      factory = "link-factory";
-	      args = {
-		link.output.nore = "alsa_input.pci_0000_74_00.6.analog-stereo";
-		link.output.port = "capture_FR";
-		link.input.node = "obs-thingy-sourcething";
-		link.input.port = "input_FR";
-	      };
-	    }
-	  ];
-	};
-      };
       # use the example session manager (no others are packaged yet so this is enabled by defau>
       # no need to redefine it in your config for now)
       #media-session.enable = true;
