@@ -26,6 +26,10 @@ in
       };
     };
 
+  environment.systemPackages = with pkgs; [
+    hello
+  ];
+
   };
   programs.obs-studio = {
     enable = true;
