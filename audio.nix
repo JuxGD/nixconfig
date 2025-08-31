@@ -50,6 +50,7 @@ in
     jamesdsp
     patchage
     pulseaudio
+    getOBSThingySourcethingID
 ];
 
   musnix = {
