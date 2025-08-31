@@ -50,9 +50,6 @@ in
     jamesdsp
     patchage
     pulseaudio
-  ];
-
-  environment.systemPackages = [ # for the obs thing bc it's not in nixpkgs
     getOBSThingySourcethingID
   ];
 
@@ -106,7 +103,7 @@ in
 
   systemd.services.get-obs-thingy-sourcething-id = {
     description = "Get the ID for the `obs-thingy-sourcething` PipeWire object and print it to a file";
-    serviceConfig.ExecStart = "${pkgs.getOBSThingySourcethingID}/bin/get-obs-thingy-sourcething-id";
+    serviceConfig.ExecStart = "${getOBSThingySourcethingID}/bin/get-obs-thingy-sourcething-id";
     wantedBy = [ "default.target" ];
   };
 }
