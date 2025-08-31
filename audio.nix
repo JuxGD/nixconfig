@@ -4,17 +4,6 @@ let
   stable = inputs.stable.legacyPackages.${pkgs.system};
   master = inputs.master.legacyPackages.${pkgs.system};
   staging = inputs.staging.legacyPackages.${pkgs.system}; 
-
-  getOBSThingySourcethingID = pkgs.stdenv.mkDerivation {
-    name = "get-obs-thingy-sourcething-id";
-    src = null;
-
-    buildCommand = ''
-      echo #!/run/current-system/sw/bin/bash > $out
-      echo "${pkgs.wireplumber}/bin/wpctl status | grep -A 5 Sources | grep obs | cut -c 1-20 | grep -o '[0-9]''\\+' >> /home/j/Scripts/obs-thingy-sourcething-id" > $out
-      chmod +x $out
-    '';
-  };
 in
 {
   environment.systemPackages = with pkgs; [
@@ -50,7 +39,6 @@ in
     jamesdsp
     patchage
     pulseaudio
-    getOBSThingySourcethingID
   ];
 
   musnix = {
@@ -103,7 +91,7 @@ in
 
   systemd.services.get-obs-thingy-sourcething-id = {
     description = "Get the ID for the `obs-thingy-sourcething` PipeWire object and print it to a file";
-    serviceConfig.ExecStart = "${getOBSThingySourcethingID}/bin/get-obs-thingy-sourcething-id";
+    serviceConfig.ExecStart = "${pkgs.wireplumber}/bin/wpctl status";
     wantedBy = [ "default.target" ];
   };
 }
