@@ -91,7 +91,7 @@ in
 
   systemd.services.get-obs-thingy-sourcething-id = {
     description = "Get the ID for the `obs-thingy-sourcething` PipeWire object and print it to a file";
-    serviceConfig.ExecStart = "/home/j/Scripts/get-obs-thingy-sourcething-id.sh";
+    serviceConfig.ExecStart = "${pkgs.wireplumber}/bin/wpctl status | grep -A 5 Sources | grep obs | cut -c 1-20 | grep -o '[0-9]''\\+' >> /home/j/Scripts/obs-thingy-sourcething-id.txt";
     wantedBy = [ "default.target" ];
   };
 }
