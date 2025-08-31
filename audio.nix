@@ -74,7 +74,7 @@ in
 		link.output.node = "alsa_input.pci_0000_74_00.6.analog-stereo";
 		link.output.port = "capture_FL";
 		link.input.node = "obs-thingy-sourcething";
-		link.input.port = "input_FL"
+		link.input.port = "input_FL";
 	      };
 	    }
 	    {
