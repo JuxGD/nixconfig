@@ -14,7 +14,7 @@ let
       echo "${pkgs.wireplumber}/bin/wpctl status | grep -A 5 Sources | grep obs | cut -c 1-20 | grep -o '[0-9]''\\+' >> /home/j/Scripts/obs-thingy-sourcething-id" > $out
       chmod +x $out
     '';
-  }
+  };
 in
 {
   environment.systemPackages = with pkgs; [
