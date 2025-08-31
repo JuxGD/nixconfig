@@ -90,6 +90,6 @@ in
   };
 
   environment.sessionVariables = {
-    OBS_THINGY_SOURCETHING_ID = builtins.readFile (pkgs.runCommand "get-obs-thingy-sourcething-id" {} "wpctl status | grep -A 5 Sources | grep obs | cut -c 1-20 | grep -o '[0-9]\+'"; );
+    OBS_THINGY_SOURCETHING_ID = builtins.readFile (pkgs.runCommand "get-obs-thingy-sourcething-id" {} "wpctl status | grep -A 5 Sources | grep obs | cut -c 1-20 | grep -o '[0-9]\+'");
   };
 }
