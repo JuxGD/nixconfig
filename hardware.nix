@@ -57,6 +57,9 @@ in
 
 	START_CHARGE_THRESH_BAT1 = 15;
         STOP_CHARGE_THRESH_BAT1 = 80;
+
+        AMDGPU_ABM_LEVEL_ON_AC = 0;
+	AMDGPU_ABM_LEVEL_ON_BAT = 0;
       };
     };
   };
