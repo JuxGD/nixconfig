@@ -41,7 +41,7 @@ in
 
     tlp = {
       enable = true;
-      config = {
+      settings = {
         STOP_CHARGE_THRESH_BAT1 = 80;
       };
     };
