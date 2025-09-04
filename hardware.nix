@@ -38,5 +38,12 @@ in
       xkb.layout = "us";
       xkb.variant = "";
     };
+
+    tlp = {
+      enable = true;
+      config = {
+        STOP_CHARGE_THRESH_BAT1 = 80;
+      };
+    };
   };
 }
