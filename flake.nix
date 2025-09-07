@@ -10,11 +10,17 @@
     staging.url = "github:NixOS/nixpkgs/staging";
 
     # use lix
-    # (as of august 17th 2025 it's not working, so let's not use it for now
-    # lix-module = {
-    #   url = "https://git.lix.systems/lix-project/nixos-module/archive/2.93.3-1.tar.gz";
-    #   inputs.nixpkgs.follows = "nixpkgs";
-    # };
+
+    lix = {
+      url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
+      flake = false;
+    };
+
+    lix-module = {
+      url = "https://git.lix.systems/lix-project/nixos-module/archive/main.tar.gz";
+      inputs.nixpkgs.follows = "nixpkgs";
+      input.lix.follows = "lix";
+    };
 
     # modules
     musnix.url = "github:musnix/musnix/master";
@@ -26,9 +32,17 @@
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 
+    nixgl.url = "github:nix-community/nixGL";
   };
 
-  outputs = { self, nixpkgs, nix-flatpak, ... }@inputs: rec { # add back lix-module when lix is reenabled
+  outputs = { self, nixpkgs, nix-flatpak, lix-module, lix, nixgl, ... }@inputs: rec
+  let
+    pkgs = import nixpkgs {
+      system = "x86_64-linux";
+      overlays = [ nixgl.overlay ];
+    };
+  in
+  {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -36,7 +50,7 @@
         modules = [
           nix-flatpak.nixosModules.nix-flatpak
           inputs.musnix.nixosModules.musnix
-          # lix-module.nixosModules.default
+          lix-module.nixosModules.default
           ./audio.nix
           ./boot.nix
           ./configuration.nix
