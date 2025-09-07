@@ -50,4 +50,14 @@ in
       };
     };
   };
+
+  environment.systemPackages = with pkgs.nixGL; [
+    nixGLDefault
+    nixGLNvidia
+    nixGLNvidiaBumblebee
+    nixGLIntel
+    nixVulkanNvidia
+    nixVulkanIntel
+  ];
+  };
 }
