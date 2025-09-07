@@ -18,7 +18,7 @@ in
     open-webui = {
       openFirewall = true;
       enable = true;
-      package = stable.openwebui;
+      package = stable.open-webui;
       environment = {
         ANONYMIZED_TELEMETRY = "False";
         DO_NOT_TRACK = "True";
