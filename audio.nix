@@ -8,7 +8,7 @@ in
 {
   environment.systemPackages = with pkgs; [
     mpd
-    carla
+    stable.carla
     bespokesynth
     yabridge
     yabridgectl
