@@ -15,12 +15,6 @@ in
     systemPackages = with pkgs; [
       tk
       egl-wayland
-      nixgl.nixGLDefault
-      nixgl.nixGLNvidia
-      nixgl.nixGLNvidiaBumblebee
-      nixgl.nixGLIntel
-      nixgl.nixVulkanNvidia
-      nixgl.nixVulkanIntel
     ];
   };
 

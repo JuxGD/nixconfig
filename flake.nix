@@ -31,18 +31,9 @@
     };
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-
-    nixgl.url = "github:nix-community/nixGL";
   };
 
-  outputs = { self, nixpkgs, nix-flatpak, lix-module, lix, nixgl, ... }@inputs:
-  let
-    pkgs = import nixpkgs {
-      system = "x86_64-linux";
-      overlays = [ nixgl.overlay ];
-    };
-  in
-  rec {
+  outputs = { self, nixpkgs, nix-flatpak, lix-module, lix, ... }@inputs: rec {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
