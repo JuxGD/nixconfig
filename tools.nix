@@ -44,9 +44,6 @@ in
     cdrkit
     wget
     keepassxc
-    temurin-bin
-    temurin-bin-8
-    temurin-bin-17
     thunderbird
     libinput
     onlyoffice-bin_latest

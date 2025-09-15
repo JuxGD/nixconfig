@@ -17,6 +17,9 @@ in
     (python3.override {
       bluezSupport = true;
     })
+    temurin-bin
+    temurin-bin-8
+    temurin-bin-17
     android-tools
     rustup
     haxe
