@@ -18,10 +18,9 @@ in
     searx = {
       enable = true;
       settings = {
-        server.base_url = "localhost";
         server.port = 1337;
-        server.bind_address = "localhost";
-        server.secret_key = "N0-t-h3_S4m3";
+        server.bind_address = "127.0.0.1";
+        server.secret_key = "secretkeylol";
       };
     };
 
