@@ -26,7 +26,7 @@
     musnix.url = "github:musnix/musnix/master";
 
     nur = {
-      url = "github:nix-community/NUR/main";
+      url = "github:JuxGD/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
