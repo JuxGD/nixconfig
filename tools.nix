@@ -29,7 +29,7 @@ in
   };
 
   environment.systemPackages = with pkgs; [
-    floorp
+    floorp-bin
     kitty
     tmux
     inotify-tools
