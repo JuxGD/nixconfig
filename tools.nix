@@ -51,6 +51,5 @@ in
     caffeine-ng
     qbittorrent
     nur.repos.lonerOrz.xdman7
-    nur.repos.JuxGD.noriskclient-launcher
   ];
 }
