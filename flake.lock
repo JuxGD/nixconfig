@@ -195,6 +195,26 @@
         "type": "github"
       }
     },
+    "personal-nur": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1758083067,
+        "narHash": "sha256-FuUN9LggEIqycF7w3PE1Y53K0WX+LWry0l1dKTkibxU=",
+        "owner": "JuxGD",
+        "repo": "nur-packges",
+        "rev": "88b9fef6b33b29562ba01188e2aa7c5614f808e2",
+        "type": "github"
+      },
+      "original": {
+        "owner": "JuxGD",
+        "repo": "nur-packges",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "lix": "lix",
@@ -204,6 +224,7 @@
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs_2",
         "nur": "nur",
+        "personal-nur": "personal-nur",
         "stable": "stable",
         "staging": "staging"
       }

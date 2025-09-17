@@ -4,8 +4,19 @@ let
   stable = inputs.stable.legacyPackages.${pkgs.system};
   master = inputs.master.legacyPackages.${pkgs.system};
   staging = inputs.staging.legacyPackages.${pkgs.system};
+
+  juxgd = inputs.personal-nur.legacyPackages.${pkgs.system};
 in
 {
+  environment.systemPackages = [
+    juxgd.noriskclient-launcher
+  ];
+
+  nix.settings = {
+    substituters = [ "https://juxgd.cachix.org" ];
+    trusted-public-keys = [ "juxgd.cachix.org-1:/Scj3g00eOCJAX3yxM9q6a3LREo/ppQQOqxtEavr+t4=" ];
+  };
+
   services = {
     forgejo.enable = true;
     gnome.gnome-keyring.enable = true;
