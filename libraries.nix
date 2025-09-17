@@ -7,11 +7,5 @@ let
 in
 {
   programs.nix-ld.enable = true;
-  programs.nix-ld.libraries = with pkgs; [
-    libappindicator
-    libayatana-appindicator
-    openssl
-    libvlc
-    sdl3
-  ];
+  programs.nix-ld.libraries = with pkgs; [];
 }
