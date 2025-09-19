@@ -9,8 +9,8 @@ in
   services = {
     misskey = {
       enable = true;
-      url = "http://127.0.0.1:42067";
       settings = {
+        url = "http://127.0.0.1:42067";
         port = 42067;
       }
     };
