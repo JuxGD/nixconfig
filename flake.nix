@@ -54,6 +54,7 @@
           ./libraries.nix
           ./networking.nix
           ./other.nix
+          ./sharkey.nix
           ./tools.nix
           ./users.nix
           ./virtualisation.nix

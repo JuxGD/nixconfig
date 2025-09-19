@@ -24,10 +24,6 @@ in
       };
     };
 
-    sharkey = {
-      enable = true;
-    };
-
     flatpak.enable = true;
   };
 
