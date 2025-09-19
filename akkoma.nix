@@ -29,7 +29,10 @@ in
           };
 
           "Pleroma.Upload" = {
-            base_url = "http://127.0.0.1:6900";
+            base_url = "127.0.0.1";
+            url = {
+              port = 6900
+            };
           };
         };
       };
