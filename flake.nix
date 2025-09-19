@@ -50,9 +50,9 @@
           ./fonts.nix
           ./gaming.nix
           ./graphics.nix
+          ./gts.nix
           ./hardware.nix
           ./libraries.nix
-          ./misskey.nix
           ./networking.nix
           ./other.nix
           ./sharkey.nix

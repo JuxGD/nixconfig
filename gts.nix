@@ -7,11 +7,16 @@ let
 in
 {
   services = {
-    misskey = {
+    gotosocial = {
       enable = true;
       settings = {
-        url = "http://127.0.0.1:42067";
+        application-name = "gotosocial";
+        bind-address = "127.0.0.1";
+        db-address = "/var/lib/gotosocial/database.sqlite";
+        db-type = "sqlite";
         port = 42067;
+        protocol = "http";
+        storage-local-base-path = "/var/lib/gotosocial/storage";
       }
     };
   };
