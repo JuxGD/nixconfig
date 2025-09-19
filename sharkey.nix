@@ -14,5 +14,13 @@ in
         port = 42069;
       };
     };
+
+    misskey = {
+      enable = true;
+      settings = {
+        url = "http://127.0.0.1:42069";
+        port = 42069;
+      };
+    };
   };
 }
