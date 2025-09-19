@@ -29,7 +29,7 @@ in
           };
 
           "Pleroma.Upload" = {
-            base_url = "127.0.0.1";
+            base_url = "https://127.0.0.1:6900";
           };
         };
       };
