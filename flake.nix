@@ -52,6 +52,7 @@
           ./graphics.nix
           ./hardware.nix
           ./libraries.nix
+          ./misskey.nix
           ./networking.nix
           ./other.nix
           ./sharkey.nix

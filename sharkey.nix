@@ -14,21 +14,5 @@ in
         port = 42069;
       };
     };
-
-    misskey = {
-      enable = true;
-      settings = {
-        # SIX SEVEEEENNN
-        url = "http://127.0.0.1:42067";
-        port = 42067;
-      };
-    };
   };
-
-  # thanks Ninlives
-  users.users.misskey = {
-    group = "misskey";
-    uid = 954;
-  };
-  users.groups.misskey.gid = 954;
 }
