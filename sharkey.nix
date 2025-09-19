@@ -24,4 +24,11 @@ in
       };
     };
   };
+
+  # thanks Ninlives
+  users.users.misskey = {
+    group = "misskey";
+    uid = 954;
+  };
+  users.groups.misskey.gid = 954;
 }
