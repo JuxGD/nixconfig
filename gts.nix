@@ -9,14 +9,12 @@ in
   services = {
     gotosocial = {
       enable = true;
+      setupPostgresqlDB = true;
       settings = {
-        application-name = "gotosocial";
+        application-name = "welcome to fun land";
         bind-address = "127.0.0.1";
-        db-address = "/var/lib/gotosocial/database.sqlite";
-        db-type = "sqlite";
         port = 42067;
         protocol = "http";
-        storage-local-base-path = "/var/lib/gotosocial/storage";
         host = "127.0.0.1:42067";
       };
     };
