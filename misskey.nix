@@ -1,56 +1,18 @@
-# Ninlives i'm using the whole file lmao tysm for this. hope it works
-{ pkgs, lib, config, inputs, ... }: let
-  dp = inputs.values.secret;
-  srv = dp.host.public.services;
-in {
-  services.misskey = {
-    enable = true;
-    settings = {
-      id = "aid";
-      dbReplications = false;
-      signToActivityPubGet = true;
-    };
-    database.createLocally = true;
-    redis.createLocally = true;
-    meilisearch.createLocally = true;
-    reverseProxy = {
+{ pkgs, lib, config, inputs, ... }:
+
+let
+  stable = inputs.stable.legacyPackages.${pkgs.system};
+  master = inputs.master.legacyPackages.${pkgs.system};
+  staging = inputs.staging.legacyPackages.${pkgs.system};
+in
+{
+  services = {
+    misskey = {
       enable = true;
-      host = srv.misskey.fqdn;
-      ssl = true;
-      webserver.nginx = {
-        enableACME = true;
-        forceSSL = true;
-        extraConfig = ''
-          client_max_body_size 256M;
-        '';
-      };
+      url = "http://127.0.0.1:42067";
+      settings = {
+        port = 42067;
+      }
     };
   };
-
-  users.users.misskey = {
-    group = "misskey";
-    uid = 954;
-  };
-  users.groups.misskey.gid = 954;
-
-  services.postgresql = {
-    identMap = ''
-      misskey misskey misskey
-    '';
-    authentication = ''
-      local misskey misskey peer map=misskey
-    '';
-  };
-
-  # Persistent
-  revive.specifications.system.boxes = [
-    {
-      src = /Data/meilisearch;
-      dst = /var/lib/private/meilisearch;
-    }
-    {
-      src = /Data/misskey;
-      dst = /var/lib/private/misskey;
-    }
-  ];
 }
