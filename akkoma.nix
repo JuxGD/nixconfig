@@ -21,7 +21,7 @@ in
           "Pleroma.Web.Endpoint" = {
             url = {
               host = "127.0.0.1";
-              port = "6700";
+              port = 6700;
               scheme = "http";
             };
             port = "42067";
@@ -30,9 +30,6 @@ in
 
           "Pleroma.Upload" = {
             base_url = "127.0.0.1";
-            url = {
-              port = 6900;
-            };
           };
         };
       };
