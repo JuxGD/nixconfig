@@ -9,8 +9,12 @@ in
   services = {
     sharkey = {
       enable = true;
+      database.createLocally = true;
+      redis.createLocally = true;
+      meilisearch.createLocally = true;
       settings = {
-        url = "http://127.0.0.1";
+        url = "http://127.0.0.1:42069";
+        port = "42069";
       };
     };
   };
