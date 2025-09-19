@@ -17,6 +17,7 @@ in
         port = 42067;
         protocol = "http";
         storage-local-base-path = "/var/lib/gotosocial/storage";
+        host = "127.0.0.1:42067";
       };
     };
   };
