@@ -24,7 +24,7 @@ in
               port = 6700;
               scheme = "http";
             };
-            port = "42067";
+            port = 42067;
             ip = [127 0 0 1];
           };
 
