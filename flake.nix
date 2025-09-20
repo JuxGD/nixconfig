@@ -42,7 +42,6 @@
           nix-flatpak.nixosModules.nix-flatpak
           inputs.musnix.nixosModules.musnix
           lix-module.nixosModules.default
-          ./akkoma.nix
           ./audio.nix
           ./boot.nix
           ./configuration.nix
@@ -53,6 +52,7 @@
           ./graphics.nix
           ./hardware.nix
           ./libraries.nix
+          ./mastodon.nix
           ./networking.nix
           ./other.nix
           ./sharkey.nix
