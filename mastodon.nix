@@ -16,7 +16,7 @@ in
   };
   services.mastodon = {
     enable = true;
-    localDomain = "localhost:42067"; # Replace with your own domain
+    localDomain = "127.0.0.1:42067"; # Replace with your own domain
     configureNginx = true;
     smtp.fromAddress = "jak@e.email"; # Email address used by Mastodon to send emails, replace with your own
     streamingProcesses = 7; # Number of processes used. It is recommended to set to the number of CPU cores minus one
