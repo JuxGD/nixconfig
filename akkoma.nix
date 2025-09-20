@@ -25,7 +25,7 @@ in
               scheme = "http";
             };
             port = 42067;
-            ip = [127 0 0 1];
+            ip = "127.0.0.1";
           };
 
           "Pleroma.Upload" = {
