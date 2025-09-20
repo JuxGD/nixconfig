@@ -6,7 +6,7 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
-  environments.systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
     mastodon
   ];
 
