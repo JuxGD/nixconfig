@@ -16,6 +16,7 @@ in
   };
   services.mastodon = {
     enable = true;
+    webPort = 6700;
     localDomain = "127.0.0.1:42067"; # Replace with your own domain
     configureNginx = true;
     smtp.fromAddress = "jak@e.email"; # Email address used by Mastodon to send emails, replace with your own
