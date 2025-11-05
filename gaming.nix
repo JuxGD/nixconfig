@@ -15,7 +15,7 @@ in
       package = (pkgs.steam.override {
         extraPkgs = (pkgs: [
           pkgs.corefonts
-          pkgs.vistafonts
+          pkgs.vista-fonts
         ]);
       });
 
