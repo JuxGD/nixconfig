@@ -13,7 +13,6 @@ in
     cudaPackages.cudnn
     cudaPackages.cutensor
     cmake
-    gcc
     (python3.override {
       bluezSupport = true;
     })
