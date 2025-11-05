@@ -21,7 +21,6 @@ in
     odin2
     padthv1
     geonkick
-    vcv-rack
     helm
     zynaddsubfx
     drumkv1

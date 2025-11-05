@@ -42,7 +42,6 @@ Jux's opinionatedly organized configuration for his NixOS install. NOT meant to 
 - [Forgejo](https://forgejo.org)
 - [LSP](https://lsp-plug.in)
 - [DISTRHO Ports](https://github.com/DISTRHO/DISTRHO-Ports)
-- [VCV Rack](https://vcvrack.com/)
 - [Scrcpy](https://github.com/Genymobile/scrcpy)
 - [QtScrcpy](https://github.com/barry-ran/QtScrcpy)
 - [KeePassXC](https://keepassxc.org)
