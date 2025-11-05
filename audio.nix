@@ -24,7 +24,6 @@ in
     helm
     zynaddsubfx
     drumkv1
-    surge-XT
     fluidsynth
     rakarrack
     rkrlv2
