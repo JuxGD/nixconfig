@@ -20,15 +20,11 @@ in
     temurin-bin-8
     temurin-bin-17
     android-tools
-    rustup
-    haxe
-    neko
     mono
     nodejs
     nodePackages.pnpm
     conda
     git
     linuxHeaders
-    pyenv
   ];
 }
