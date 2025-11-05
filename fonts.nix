@@ -15,7 +15,6 @@ in
       noto-fonts-color-emoji
       font-awesome
       source-han-sans
-      source-han-sans-japanese
       source-han-serif-japanese
       open-sans
       corefonts
