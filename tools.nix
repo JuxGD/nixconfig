@@ -45,7 +45,7 @@ in
     keepassxc
     thunderbird
     libinput
-    onlyoffice-bin
+    onlyoffice-desktopeditors
     f3
     caffeine-ng
     qbittorrent
