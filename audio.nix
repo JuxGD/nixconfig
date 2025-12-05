@@ -37,6 +37,7 @@ in
     jamesdsp
     patchage
     pulseaudio
+    obs-cli
   ];
 
   musnix = {
