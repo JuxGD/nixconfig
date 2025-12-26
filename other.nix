@@ -17,7 +17,6 @@ in
 
     ollama = {
       enable = true;
-      acceleration = "cuda";
     };
 
     open-webui = {
