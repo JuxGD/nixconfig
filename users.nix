@@ -17,14 +17,14 @@ in
         isNormalUser = true;
         description = "j";
         shell = pkgs.zsh;
-        extraGroups = [ "wheel" "networkmanager" "libvirtd" "video" "jackaudio" "audio" ];
+        extraGroups = [ "wheel" "networkmanager" "libvirtd" "video" "jackaudio" "audio" "input" ];
       };
 
       j2 = {
         isNormalUser = true;
         description = "j2";
         shell = pkgs.zsh;
-        extraGroups = [ "wheel" "networkmanager" "libvirtd" "video" "jackaudio" "audio" ];
+        extraGroups = [ "wheel" "networkmanager" "libvirtd" "video" "jackaudio" "audio" "input" ];
       };
     };
   };
