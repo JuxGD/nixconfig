@@ -30,7 +30,7 @@ in
     easyeffects
     bslizr
     delayarchitect
-    plugdata
+    stable.plugdata
     cardinal
     distrho-ports
     vital
