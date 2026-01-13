@@ -38,7 +38,8 @@ in
     patchage
     pulseaudio
     obs-cli
-  ];
+    pwvucontrol
+    ];
 
   musnix = {
     enable = true;
