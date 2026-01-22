@@ -12,7 +12,6 @@ in
       systemd-boot.enable = false;
       efi = {
         canTouchEfiVariables = true;
-        efiSysMountPoint = "/efi";
       };
       grub = {
         devices = [ "nodev" ];
