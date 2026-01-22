@@ -10,14 +10,20 @@ in
     supportedFilesystems = [ "ntfs" ];
     loader = {
       systemd-boot.enable = false;
+      
       efi = {
         canTouchEfiVariables = true;
       };
+
       grub = {
         devices = [ "nodev" ];
         enable = true;
         efiSupport = true;
         useOSProber = true;
+      };
+
+      limine = {
+	enable = true;
       };
     };
     extraModprobeConfig = ''
