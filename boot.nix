@@ -17,7 +17,7 @@ in
 
       grub = {
         devices = [ "nodev" ];
-        enable = true;
+        enable = false;
         efiSupport = true;
         useOSProber = true;
       };
