@@ -7,7 +7,7 @@ let
 in
 {
   boot = {
-    supportedFilesystems = [ "ntfs" ];
+    supportedFilesystems = [ "ntfs" "ext4" ];
     loader = {
       systemd-boot.enable = false;
       
