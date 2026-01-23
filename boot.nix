@@ -24,6 +24,8 @@ in
 
       limine = {
 	enable = true;
+	enableEditor = true;
+	efiSupport = true;
       };
     };
     extraModprobeConfig = ''
