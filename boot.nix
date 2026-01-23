@@ -16,14 +16,14 @@ in
       };
 
       grub = {
-        devices = [ "nodev" ];
-        enable = false;
+        devices = [ "/dev/nvme0n1" ];
+        enable = true;
         efiSupport = true;
         useOSProber = true;
       };
 
       limine = {
-	enable = true;
+	enable = false;
 	enableEditor = true;
 	efiSupport = true;
       };
