@@ -27,6 +27,7 @@ in
 	enable = true;
 	enableEditor = true;
 	efiSupport = true;
+	biosSupport = true;
       };
     };
     extraModprobeConfig = ''
