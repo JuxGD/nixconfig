@@ -17,12 +17,13 @@ in
 
       grub = {
         devices = [ "/dev/nvme0n1" ];
-        enable = true;
+        enable = false;
         efiSupport = true;
         useOSProber = true;
       };
 
       limine = {
+        biosDevice = [ "/dev/nvme0n1" ];
 	enable = false;
 	enableEditor = true;
 	efiSupport = true;
