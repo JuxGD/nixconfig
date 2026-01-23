@@ -24,7 +24,7 @@ in
 
       limine = {
         biosDevice = [ "/dev/nvme0n1" ];
-	enable = false;
+	enable = true;
 	enableEditor = true;
 	efiSupport = true;
       };
