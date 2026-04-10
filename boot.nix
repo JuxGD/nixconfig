@@ -4,8 +4,12 @@ let
   stable = inputs.stable.legacyPackages.${pkgs.system};
   master = inputs.master.legacyPackages.${pkgs.system};
   staging = inputs.staging.legacyPackages.${pkgs.system};
-in
+:in
 {
+  nixpkgs.overlays [
+    nix-cachyos-kernel.overlays.default
+  ];
+
   boot = {
     supportedFilesystems = [ "ntfs" "ext4" ];
     loader = {
@@ -34,6 +38,6 @@ in
       options snd slots=snd-hda-intel
     '';
 
-    kernelPackages = pkgs.linuxPackages_latest;
+    kernelPackages = pkgs.;
   };
 }
