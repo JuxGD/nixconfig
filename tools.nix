@@ -36,7 +36,7 @@ in
     qtscrcpy
     unzip
     ffmpeg
-    wineWowPackages.staging
+    wineWow64Packages.staging
     winetricks
     fuse3
     unzip
