@@ -1,4 +1,4 @@
-{ config, lib, pkgs, inputs, ... }:
+{ config, lib, pkgs, inputs, nix-cachyos-kernel, ... }:
 
 let
   stable = inputs.stable.legacyPackages.${pkgs.system};
