@@ -44,9 +44,9 @@ in
 
   };
 
-  environment.variables = [
+  environment.variables = {
     SCX_FLAGS_OVERRIDE = "-m performance -c 0 -p 0 -w";
-  ];
+  };
 
   services.scx = {
     enable = true;
