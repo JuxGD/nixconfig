@@ -52,7 +52,5 @@ in
     enable = true;
     scheduler = "scx_cosmos";
   };
-
-  environment.
 }
 
