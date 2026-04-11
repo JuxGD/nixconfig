@@ -22,7 +22,7 @@ in
       };
 
       grub = {
-        devices = [ "/dev/nvme0n1" ];
+        device = "nodev";
         enable = true;
         efiSupport = true;
         useOSProber = true;
