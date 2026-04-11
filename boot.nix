@@ -42,11 +42,9 @@ in
 
     kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore;
 
-  };
+    kernelModules = [ "ntsync" ];
 
-  kernelModules = [
-    "ntsync"
-  ];
+   };
 
   services.scx = {
     enable = true;
