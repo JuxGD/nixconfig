@@ -36,7 +36,7 @@ in
 
   programs = {
     kdeconnect.enable = true;
-    light.enable = true;
+    brightnessctl.enable = true;
     zsh.enable = true;
     gnupg.agent.enable = true;
     gnupg.agent.enableSSHSupport = true;
