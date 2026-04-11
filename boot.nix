@@ -4,9 +4,14 @@ let
   stable = inputs.stable.legacyPackages.${pkgs.system};
   master = inputs.master.legacyPackages.${pkgs.system};
   staging = inputs.staging.legacyPackages.${pkgs.system};
-  nix-cachyos-kernel = inputs.nix-cachyos-kernel.legacyPackages.${pkgs.system};
+
+  nix-cachyos-kernel = inputs.nix-cachyos-kernel;
 in
 {
+  nixpkgs.overlays = [
+    nix-cachyos-kernel.overlays.default
+  ];
+
   boot = {
     supportedFilesystems = [ "ntfs" "ext4" ];
     loader = {
@@ -35,7 +40,7 @@ in
       options snd slots=snd-hda-intel
     '';
 
-    kernelPackages = nix-cachyos-kernel.linux-cachyos-bore;
+    kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore;
 
   };
 
