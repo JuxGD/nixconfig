@@ -12,6 +12,10 @@ in
       NIXOS_OZONE_WL = "1";
     };
 
+    etc."environment".text = ''
+      KWIN_DRM_NO_AMS=1
+    '';
+
     systemPackages = with pkgs; [
       xwayland-satellite
       wayland-utils

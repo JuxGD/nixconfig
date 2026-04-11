@@ -26,6 +26,6 @@ in
 
   services.ananicy = {
     enable = true;
-    rulesProvider = pkgs.cachyos-ananicy-rules;
+    rulesProvider = pkgs.ananicy-rules-cachyos;
   };
 }
