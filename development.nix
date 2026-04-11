@@ -8,10 +8,10 @@ in
 {
   environment.systemPackages = with pkgs; [
     vscode-fhs
-    cudaPackages.cudatoolkit
-    cudaPackages.cuda_cudart
-    cudaPackages.cudnn
-    cudaPackages.libcutensor
+    stable.cudaPackages.cudatoolkit
+    stable.cudaPackages.cuda_cudart
+    stable.cudaPackages.cudnn
+    stable.cudaPackages.libcutensor
     cmake
     (python3.override {
         bluezSupport = true;
