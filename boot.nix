@@ -1,15 +1,12 @@
-{ config, lib, pkgs, inputs, nix-cachyos-kernel, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 let
   stable = inputs.stable.legacyPackages.${pkgs.system};
   master = inputs.master.legacyPackages.${pkgs.system};
   staging = inputs.staging.legacyPackages.${pkgs.system};
+  nix-cachyos-kernel = inputs.nix-cachyos-kernel.legacyPackages.${pkgs.system}
 in
 {
-  nixpkgs.overlays = [
-    nix-cachyos-kernel.overlays.default
-  ];
-
   boot = {
     supportedFilesystems = [ "ntfs" "ext4" ];
     loader = {
@@ -38,6 +35,11 @@ in
       options snd slots=snd-hda-intel
     '';
 
-    kernelPackages = pkgs.linux-cachyos-bore;
+    kernelPackages = nix-cachyos-kernel.linux-cachyos-bore;
+
+    services.scx = {
+      enable = true;
+      scheduler = "scx_cosmos";
+    };
   };
 }
