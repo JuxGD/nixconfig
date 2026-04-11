@@ -4,7 +4,7 @@ let
   stable = inputs.stable.legacyPackages.${pkgs.system};
   master = inputs.master.legacyPackages.${pkgs.system};
   staging = inputs.staging.legacyPackages.${pkgs.system};
-:in
+in
 {
   nixpkgs.overlays [
     nix-cachyos-kernel.overlays.default
