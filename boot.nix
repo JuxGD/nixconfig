@@ -38,6 +38,6 @@ in
       options snd slots=snd-hda-intel
     '';
 
-    kernelPackages = pkgs.;
+    kernelPackages = pkgs.linux-cachyos-bore;
   };
 }
