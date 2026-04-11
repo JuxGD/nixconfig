@@ -6,7 +6,7 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
-  nixpkgs.overlays [
+  nixpkgs.overlays = [
     nix-cachyos-kernel.overlays.default
   ];
 
