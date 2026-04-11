@@ -21,8 +21,7 @@ in
     temurin-bin-17
     android-tools
     mono
-    nodejs
-    nodePackages.pnpm
+    pnpm
     conda
     git
     linuxHeaders
