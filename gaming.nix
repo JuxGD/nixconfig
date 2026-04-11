@@ -23,4 +23,9 @@ in
 
     };
   };
+
+  services.ananicy = {
+    enable = true;
+    rulesProvider = pkgs.cachyos-ananicy-rules;
+  };
 }
