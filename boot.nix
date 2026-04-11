@@ -37,9 +37,10 @@ in
 
     kernelPackages = nix-cachyos-kernel.linux-cachyos-bore;
 
-    services.scx = {
-      enable = true;
-      scheduler = "scx_cosmos";
-    };
+  };
+
+  services.scx = {
+    enable = true;
+    scheduler = "scx_cosmos";
   };
 }
