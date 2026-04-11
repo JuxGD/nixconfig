@@ -44,6 +44,10 @@ in
 
   };
 
+  kernelModules = [
+    "ntsync"
+  ];
+
   services.scx = {
     enable = true;
     scheduler = "scx_cosmos";
