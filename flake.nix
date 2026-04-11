@@ -53,7 +53,6 @@
           ./graphics.nix
           ./hardware.nix
           ./libraries.nix
-          ./mastodon.nix
           ./networking.nix
           ./other.nix
           ./sharkey.nix
