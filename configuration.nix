@@ -36,7 +36,6 @@ in
 
   programs = {
     kdeconnect.enable = true;
-    brightnessctl.enable = true;
     zsh.enable = true;
     gnupg.agent.enable = true;
     gnupg.agent.enableSSHSupport = true;
@@ -51,6 +50,10 @@ in
       ];
     };
   };
+
+  environment.systemPackages = with pkgs; [
+    brightnessctl
+  ];
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
