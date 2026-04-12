@@ -18,7 +18,7 @@ in
         description = "j";
         shell = pkgs.zsh;
         extraGroups = [ "wheel" "networkmanager" "libvirtd" "video" "jackaudio" "audio" "input" ];
-	lingering = true;
+	linger = true;
       };
 
       j2 = {
