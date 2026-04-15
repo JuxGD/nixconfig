@@ -24,6 +24,7 @@ in
       wl-clipboard
       mako
       walker
+      elephant
       wlogout
       swww
       swaylock
