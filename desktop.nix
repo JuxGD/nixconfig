@@ -54,10 +54,6 @@ in
 
   programs = {
     xwayland.enable = true;
-    
-    niri = {
-      package = pkgs.niri-package;
-    };
   };
 
   xdg.portal.extraPortals = with pkgs; [

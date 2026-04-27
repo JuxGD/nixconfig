@@ -26,11 +26,6 @@
 
     # modules
     musnix.url = "github:musnix/musnix/master";
-    
-    niri-package = {
-      url = "github:urayde/niri";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     nur = {
       url = "github:nix-community/NUR";
