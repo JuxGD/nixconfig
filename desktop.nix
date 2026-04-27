@@ -6,7 +6,7 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
-  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+  nixpkgs.overlays = [ inputs.niri-package.overlays.default ];
   
   environment = {
     variables = {
@@ -56,7 +56,7 @@ in
     xwayland.enable = true;
     
     niri = {
-      package = pkgs.niri-unstable;
+      package = pkgs.niri-package;
     };
   };
 
