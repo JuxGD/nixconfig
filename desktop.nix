@@ -6,8 +6,6 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
-  nixpkgs.overlays = [ inputs.niri-package.overlays.default ];
-  
   environment = {
     variables = {
       MESA_DISK_CACHE_MULTI_FILE = "1";

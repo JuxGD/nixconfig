@@ -192,27 +192,6 @@
         "type": "github"
       }
     },
-    "niri-package": {
-      "inputs": {
-        "nixpkgs": [
-          "nixpkgs"
-        ],
-        "rust-overlay": "rust-overlay"
-      },
-      "locked": {
-        "lastModified": 1777048414,
-        "narHash": "sha256-r5eHzNkYpOgmVnIEFUYUhPqyPnEl1QARArWwEGQFTb8=",
-        "owner": "urayde",
-        "repo": "niri",
-        "rev": "f4d3da649aac989b5ef91494c5e72eddecb56e29",
-        "type": "github"
-      },
-      "original": {
-        "owner": "urayde",
-        "repo": "niri",
-        "type": "github"
-      }
-    },
     "nix-cachyos-kernel": {
       "inputs": {
         "cachyos-kernel": "cachyos-kernel",
@@ -342,34 +321,12 @@
         "lix-module": "lix-module",
         "master": "master",
         "musnix": "musnix",
-        "niri-package": "niri-package",
         "nix-cachyos-kernel": "nix-cachyos-kernel",
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs_3",
         "nur": "nur",
         "stable": "stable",
         "staging": "staging"
-      }
-    },
-    "rust-overlay": {
-      "inputs": {
-        "nixpkgs": [
-          "niri-package",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1757989933,
-        "narHash": "sha256-9cpKYWWPCFhgwQTww8S94rTXgg8Q8ydFv9fXM6I8xQM=",
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "rev": "8249aa3442fb9b45e615a35f39eca2fe5510d7c3",
-        "type": "github"
-      },
-      "original": {
-        "owner": "oxalica",
-        "repo": "rust-overlay",
-        "type": "github"
       }
     },
     "stable": {
