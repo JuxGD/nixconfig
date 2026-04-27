@@ -6,6 +6,8 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
+  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+
   environment = {
     variables = {
       MESA_DISK_CACHE_MULTI_FILE = "1";
@@ -52,6 +54,10 @@ in
 
   programs = {
     xwayland.enable = true;
+    niri = {
+      enable = true;
+      package = pkgs.niri-unstable;
+    };
   };
 
   xdg.portal.extraPortals = with pkgs; [

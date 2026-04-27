@@ -32,6 +32,18 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    niri-package = {
+      url = "github:urayde/niri";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.niri-unstable.follows = "niri-package";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
   };
 
@@ -44,6 +56,7 @@
           nix-flatpak.nixosModules.nix-flatpak
           inputs.musnix.nixosModules.musnix
           lix-module.nixosModules.default
+	  inputs.niri.nixosModules.niri
 	  ./audio.nix
           ./boot.nix
           ./configuration.nix
