@@ -7,7 +7,7 @@ let
 in
 {
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
-  imports = [inputs.niri.nixosModules.niri ];
+  imports = [ inputs.niri.nixosModules.niri ];
   
   environment = {
     variables = {
@@ -53,17 +53,11 @@ in
     };
   };
 
-  nix.settings = {
-    substituters = [ "https://hyprland.cachix.org" ];
-    trusted-public-keys = [ "hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc=" ];
-  };
-
   programs = {
     xwayland.enable = true;
     
     niri = {
       package = pkgs.niri-unstable;
-      config = (builtins.readFile ./niri.kdl);
     };
   };
 
