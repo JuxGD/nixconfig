@@ -8,6 +8,8 @@
     master.url = "github:NixOS/nixpkgs/master"; 
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable"; # unstable branch is default
     staging.url = "github:NixOS/nixpkgs/staging";
+
+    # cachyos kernel
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
 
     # use lix
@@ -53,6 +55,7 @@
           nix-flatpak.nixosModules.nix-flatpak
           inputs.musnix.nixosModules.musnix
           lix-module.nixosModules.default
+	  niri.nixosModules.niri
           ./audio.nix
           ./boot.nix
           ./configuration.nix
