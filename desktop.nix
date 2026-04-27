@@ -7,7 +7,6 @@ let
 in
 {
   nixpkgs.overlays = [ inputs.niri.overlays.niri ];
-  imports = [ inputs.niri.nixosModules.niri ];
   
   environment = {
     variables = {
