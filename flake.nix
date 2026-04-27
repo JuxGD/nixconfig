@@ -55,7 +55,6 @@
           nix-flatpak.nixosModules.nix-flatpak
           inputs.musnix.nixosModules.musnix
           lix-module.nixosModules.default
-	  inputs.niri.nixosModules.niri
           ./audio.nix
           ./boot.nix
           ./configuration.nix

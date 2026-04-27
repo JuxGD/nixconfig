@@ -6,7 +6,9 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
-  nixpkgs.overlays = [ inputs.niri-package.overlays.default inputs.niri.overlays.niri ];
+  nixpkgs.overlays = [ inputs.niri-package.overlays.default ];
+  
+  imports = [ inputs.niri.nixosModules.niri ];
 
   environment = {
     variables = {
