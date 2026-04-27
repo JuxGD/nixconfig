@@ -11,7 +11,6 @@
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
 
     # use lix
-
     lix = {
       url = "https://git.lix.systems/lix-project/lix/archive/main.tar.gz";
       flake = false;
@@ -25,6 +24,17 @@
 
     # modules
     musnix.url = "github:musnix/musnix/master";
+    
+    niri-package = {
+      url = "github:urayde/niri";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    niri = {
+      url = "github:sodiboo/niri-flake";
+      inputs.niri-unstable.follows = "niri-package";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     nur = {
       url = "github:nix-community/NUR";
