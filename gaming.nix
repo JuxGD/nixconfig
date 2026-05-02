@@ -22,7 +22,7 @@ in
       });
 
       extraCompatPackages = [
-        proton-flake.packages.${pkgs.stdenv.hostPlatform.system}.cachyos-proton
+        proton-flake.packages.${pkgs.stdenv.hostPlatform.system}.ge-proton
       ];
 
       gamescopeSession.enable = true;
