@@ -21,7 +21,9 @@ in
         ]);
       });
 
-      extraCompatPackages = [];
+      extraCompatPackages = [
+        proton-flake.packages.${pkgs.stdenv.hostPlatform.system}.cachyos-proton
+      ];
 
       gamescopeSession.enable = true;
 
