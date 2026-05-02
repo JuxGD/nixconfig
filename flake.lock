@@ -396,6 +396,26 @@
         "type": "github"
       }
     },
+    "proton-flake": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1777685327,
+        "narHash": "sha256-q4ZBBnKmofFHkcP2zvepMik4xHF4FfUEpjztE/5Drjk=",
+        "owner": "JuxGD",
+        "repo": "proton-flake",
+        "rev": "60ee250f58fbf4cd50e6dcd57a7f25c7632b00be",
+        "type": "github"
+      },
+      "original": {
+        "owner": "JuxGD",
+        "repo": "proton-flake",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "lix": "lix",
@@ -408,6 +428,7 @@
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs_3",
         "nur": "nur",
+        "proton-flake": "proton-flake",
         "stable": "stable",
         "staging": "staging"
       }
