@@ -403,11 +403,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777685327,
-        "narHash": "sha256-q4ZBBnKmofFHkcP2zvepMik4xHF4FfUEpjztE/5Drjk=",
+        "lastModified": 1777688672,
+        "narHash": "sha256-em6hflZSLcaw2iGrwgIuvQ7raLy8FEfqqvOVISjsDnQ=",
         "owner": "JuxGD",
         "repo": "proton-flake",
-        "rev": "60ee250f58fbf4cd50e6dcd57a7f25c7632b00be",
+        "rev": "1257f31a4b02be8846a91969901acc1516de68ce",
         "type": "github"
       },
       "original": {
