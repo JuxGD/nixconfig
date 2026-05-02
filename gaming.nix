@@ -22,6 +22,7 @@ in
       });
 
       extraCompatPackages = [
+        proton-flake.packages.${pkgs.stdenv.hostPlatform.system}.ge-proton
         proton-flake.packages.${pkgs.stdenv.hostPlatform.system}.cachyos-proton
       ];
 
