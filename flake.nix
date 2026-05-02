@@ -43,11 +43,15 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+
+    proton-flake = {
+      url = "github:JuxGD/proton-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nix-cachyos-kernel, nix-flatpak, lix-module, lix, ... }@inputs: rec {
+  outputs = { self, nixpkgs, nix-cachyos-kernel, nix-flatpak, lix-module, lix, proton-flake, ... }@inputs: rec {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

@@ -19,6 +19,10 @@ in
         ]);
       });
 
+      extraCompatPackages = [
+        proton-flake.packages.${pkgs.stdenv.hostPlatform.system}.dw-proton
+      ];
+
       gamescopeSession.enable = true;
 
     };
