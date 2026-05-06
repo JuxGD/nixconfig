@@ -58,12 +58,23 @@ in
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  nixpkgs.config.permittedInsecurePackages = [ "libsoup-2.74.3" ];
+  nix = {
 
-  nix.settings = {
-    experimental-features = [ "nix-command" "flakes" ];
-    allowed-users = [ "@wheel" "j2" "j" ];
-    auto-optimise-store = true;
+    settings = {
+      experimental-features = [ "nix-command" "flakes" ];
+      allowed-users = [ "@wheel" "j2" "j" ];
+      auto-optimise-store = true;
+    };
+
+    optimise = {
+      automatic = true;
+    };
+
+    gc = {
+      automatic = true;
+      options="--delete-older-than 5d"
+    };
+
   };
 
   system.stateVersion = "24.05"; # Did you read the comment?
