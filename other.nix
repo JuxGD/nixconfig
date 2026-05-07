@@ -6,6 +6,8 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
+  nix.settings.substituters = pkgs.lib.mkForce [ "https://cache.nixos.org" ];
+
   services = {
     forgejo.enable = true;
     gnome.gnome-keyring.enable = true;
