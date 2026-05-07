@@ -12,6 +12,9 @@ in
     nix-cachyos-kernel.overlays.default
   ];
 
+  nix.settings.substituters = [ "https://attic.xuyh0120.win/lantian" ];
+  nix.settings.public-keys = [ "lantian: EaAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" ];
+  
   boot = {
     supportedFilesystems = [ "ntfs" "ext4" ];
     loader = {
@@ -40,7 +43,7 @@ in
       options snd slots=snd-hda-intel
     '';
 
-    kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-bore-lto;
+    kernelPackages = linux_zen;
 
     kernelModules = [ "ntsync" ];
 
