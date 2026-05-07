@@ -6,11 +6,6 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
-  nix.settings = {
-    substituters = [ "https://juxgd.cachix.org" ];
-    trusted-public-keys = [ "juxgd.cachix.org-1:/Scj3g00eOCJAX3yxM9q6a3LREo/ppQQOqxtEavr+t4=" ];
-  };
-
   services = {
     forgejo.enable = true;
     gnome.gnome-keyring.enable = true;
@@ -32,5 +27,4 @@ in
       obs-vkcapture
     ];
   };
-
 }
