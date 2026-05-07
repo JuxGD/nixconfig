@@ -28,7 +28,7 @@ in
       walker
       elephant
       wlogout
-      swww
+      awww
       swaylock
       swayidle
       waybar
