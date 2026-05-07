@@ -43,7 +43,7 @@ in
       options snd slots=snd-hda-intel
     '';
 
-    kernelPackages = linux_zen;
+    kernelPackages = pkgs.linux_zen;
 
     kernelModules = [ "ntsync" ];
 
