@@ -47,7 +47,6 @@ in
     libinput
     onlyoffice-desktopeditors
     f3
-    caffeine-ng
     qbittorrent
     nur.repos.lonerOrz.xdman7
   ];
