@@ -56,7 +56,7 @@ in
     xwayland.enable = true;
     niri = {
       enable = true;
-      package = pkgs.niri-unstable;
+      package = pkgs.niri;
     };
   };
 
