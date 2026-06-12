@@ -219,17 +219,14 @@
         "pywmpkg": "pywmpkg"
       },
       "locked": {
-        "lastModified": 1691532543,
-        "narHash": "sha256-+5Dd4TJxLlIFJJuEPmbsmM+ZiFeaogDVWsBXvR3sV3M=",
-        "ref": "refs/heads/master",
-        "rev": "20e86be145881becd53a73b7c2ff24fde3f7b87e",
-        "revCount": 748,
-        "type": "git",
-        "url": "https://git.sr.ht/~atha/newm-atha"
+        "lastModified": 1781284914,
+        "narHash": "sha256-kBbAX07YoQiJmZs/kXkX5dQItQ6YvWOD3U99v8bwiig=",
+        "path": "/home/j/GitRepos/newm-atha-nix",
+        "type": "path"
       },
       "original": {
-        "type": "git",
-        "url": "https://git.sr.ht/~atha/newm-atha"
+        "path": "/home/j/GitRepos/newm-atha-nix",
+        "type": "path"
       }
     },
     "niri": {
