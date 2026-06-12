@@ -105,6 +105,24 @@
         "type": "github"
       }
     },
+    "flake-utils_2": {
+      "inputs": {
+        "systems": "systems_2"
+      },
+      "locked": {
+        "lastModified": 1681202837,
+        "narHash": "sha256-H+Rh19JDwRtpVPAWp64F+rlEtxUWBAQW28eAi3SRSzg=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "cfacdce06f30d2b68473a46042957675eebb3401",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "flakey-profile": {
       "locked": {
         "lastModified": 1712898590,
@@ -190,6 +208,28 @@
         "ref": "master",
         "repo": "musnix",
         "type": "github"
+      }
+    },
+    "newm": {
+      "inputs": {
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": [
+          "nixpkgs"
+        ],
+        "pywmpkg": "pywmpkg"
+      },
+      "locked": {
+        "lastModified": 1691532543,
+        "narHash": "sha256-+5Dd4TJxLlIFJJuEPmbsmM+ZiFeaogDVWsBXvR3sV3M=",
+        "ref": "refs/heads/master",
+        "rev": "20e86be145881becd53a73b7c2ff24fde3f7b87e",
+        "revCount": 748,
+        "type": "git",
+        "url": "https://git.sr.ht/~atha/newm-atha"
+      },
+      "original": {
+        "type": "git",
+        "url": "https://git.sr.ht/~atha/newm-atha"
       }
     },
     "niri": {
@@ -416,12 +456,38 @@
         "type": "github"
       }
     },
+    "pywmpkg": {
+      "inputs": {
+        "flake-utils": [
+          "newm",
+          "flake-utils"
+        ],
+        "nixpkgs": [
+          "newm",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1683389971,
+        "narHash": "sha256-HI4jkvH+CCxSTDFcJ0R69tV7dD34NMFklGFDStU3uHo=",
+        "owner": "~atha",
+        "repo": "pywm-atha",
+        "rev": "4bfa3c75ba6678aeed8b3b33b2c4f43453d4319a",
+        "type": "sourcehut"
+      },
+      "original": {
+        "owner": "~atha",
+        "repo": "pywm-atha",
+        "type": "sourcehut"
+      }
+    },
     "root": {
       "inputs": {
         "lix": "lix",
         "lix-module": "lix-module",
         "master": "master",
         "musnix": "musnix",
+        "newm": "newm",
         "niri": "niri",
         "niri-package": "niri-package",
         "nix-cachyos-kernel": "nix-cachyos-kernel",
@@ -487,6 +553,21 @@
       }
     },
     "systems": {
+      "locked": {
+        "lastModified": 1681028828,
+        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
+      }
+    },
+    "systems_2": {
       "locked": {
         "lastModified": 1681028828,
         "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",

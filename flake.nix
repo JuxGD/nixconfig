@@ -49,9 +49,14 @@
       url = "github:JuxGD/proton-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    newm = {
+      url = "codeberg:JuxGD/newm-atha-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, nix-cachyos-kernel, nix-flatpak, lix-module, lix, proton-flake, ... }@inputs: rec {
+  outputs = { self, nixpkgs, nix-cachyos-kernel, nix-flatpak, lix-module, lix, proton-flake, newm, ... }@inputs: rec {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";

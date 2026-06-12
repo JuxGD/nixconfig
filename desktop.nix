@@ -6,7 +6,9 @@ let
   staging = inputs.staging.legacyPackages.${pkgs.system};
 in
 {
-  nixpkgs.overlays = [ inputs.niri.overlays.niri ];
+  nixpkgs.overlays = [
+    inputs.niri.overlays.niri
+  ];
 
   environment = {
     variables = {
@@ -33,6 +35,7 @@ in
       swayidle
       waybar
       btop
+      inputs.newm.packages.x86_64-linux.newm-atha
     ];
   };
 
