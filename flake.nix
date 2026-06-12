@@ -51,7 +51,7 @@
     };
 
     newm = {
-      url = "path:///home/j/GitRepos/newm-atha-nix";
+      url = "sourcehut:~atha/newm-atha";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
