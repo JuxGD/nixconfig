@@ -8,6 +8,10 @@ in
 {
   nixpkgs.overlays = [
     inputs.niri.overlays.niri
+
+    (self: super: {
+      newm-atha = inputs.newm.packages."x86_64-linux".newm-atha;
+    })
   ];
 
   environment = {
@@ -35,7 +39,7 @@ in
       swayidle
       waybar
       btop
-      inputs.newm.packages.x86_64-linux.newm-atha
+      newm-atha
     ];
   };
 
