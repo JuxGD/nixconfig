@@ -51,7 +51,7 @@
     };
 
     newm = {
-      url = "codeberg:JuxGD/newm-atha-nix";
+      url = "path:///home/j/GitRepos/newm-atha-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
