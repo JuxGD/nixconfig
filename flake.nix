@@ -32,6 +32,8 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+
     niri-package = {
       url = "github:urayde/niri";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -56,7 +58,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nix-cachyos-kernel, nix-flatpak, lix-module, lix, proton-flake, newm, ... }@inputs: rec {
+  outputs = { self, nixpkgs, nix-cachyos-kernel, nix-flatpak, lix-module, lix, proton-flake, newm, chaotic, ... }@inputs: rec {
     nixosConfigurations = {
       jpc = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
@@ -66,6 +68,7 @@
           inputs.musnix.nixosModules.musnix
           lix-module.nixosModules.default
 	  inputs.niri.nixosModules.niri
+          chaotic.nixosModules.default
 	  ./audio.nix
           ./boot.nix
           ./configuration.nix
