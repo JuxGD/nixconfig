@@ -9,6 +9,12 @@ in
   services = {
     forgejo.enable = true;
     gnome.gnome-keyring.enable = true;
+
+    samba = {
+      enable = true;
+      winbindd.enable = true;
+      nsswins = true;
+    };
   };
 
   programs.obs-studio = {
