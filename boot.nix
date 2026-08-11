@@ -40,7 +40,7 @@ in
       options snd slots=snd-hda-intel
     '';
 
-    kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
+    kernelPackages = pkgs.linuxKernel.kernels.linux_7_1;
 
     kernelModules = [ "ntsync" ];
 
