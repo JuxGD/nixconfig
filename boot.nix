@@ -40,7 +40,7 @@ in
       options snd slots=snd-hda-intel
     '';
 
-    kernelPackages = pkgs.linuxKernel.kernels.linux_7_1;
+    kernelPackages = pkgs.linuxPackages_latest;
 
     kernelModules = [ "ntsync" ];
 
